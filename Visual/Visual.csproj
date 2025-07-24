@@ -164,11 +164,47 @@
     <Compile Include="Cliente\frmMenuCliente.Designer.cs">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Propietario\AgregarSectorEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propietario\AgregarSectorEvento.Designer.cs">
+      <DependentUpon>AgregarSectorEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Propietario\frmAgregarEventoLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propietario\frmAgregarEventoLocal.Designer.cs">
+      <DependentUpon>frmAgregarEventoLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Propietario\frmEventosLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propietario\frmEventosLocal.Designer.cs">
+      <DependentUpon>frmEventosLocal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Propietario\frmMenuVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Propietario\frmMenuVendedor.Designer.cs">
       <DependentUpon>frmMenuVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Propietario\frmMisLocales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propietario\frmMisLocales.Designer.cs">
+      <DependentUpon>frmMisLocales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Propietario\frmModificarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propietario\frmModificarEvento.Designer.cs">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Propietario\frmRegistrarLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propietario\frmRegistrarLocal.Designer.cs">
+      <DependentUpon>frmRegistrarLocal.cs</DependentUpon>
     </Compile>
     <Compile Include="_Inicio\frmCambiarContraseña.cs">
       <SubType>Form</SubType>
@@ -202,8 +238,26 @@
     <EmbeddedResource Include="Cliente\frmMenuCliente.resx">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Propietario\AgregarSectorEvento.resx">
+      <DependentUpon>AgregarSectorEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propietario\frmAgregarEventoLocal.resx">
+      <DependentUpon>frmAgregarEventoLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propietario\frmEventosLocal.resx">
+      <DependentUpon>frmEventosLocal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Propietario\frmMenuVendedor.resx">
       <DependentUpon>frmMenuVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propietario\frmMisLocales.resx">
+      <DependentUpon>frmMisLocales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propietario\frmModificarEvento.resx">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propietario\frmRegistrarLocal.resx">
+      <DependentUpon>frmRegistrarLocal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Inicio\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
