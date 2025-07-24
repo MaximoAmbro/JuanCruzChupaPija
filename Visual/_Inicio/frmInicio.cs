@@ -32,8 +32,6 @@ namespace Visual
             /*  GestorClientes.Instance.CargarLista();
             GestorPropietario.Instance.CargarLista(); */
         }
-
-
         private void frmInicio_Load(object sender, EventArgs e)
         {
             TxtUsername.Text = "";
@@ -115,8 +113,9 @@ namespace Visual
         }
         private void lblcrearcuenta_Click(object sender, EventArgs e)
         {
-            /*  frmCrearUsuario frm = new frmCrearUsuario();
-              frm.Show(); */
+            frmCrearUsuario frm = new frmCrearUsuario();
+            frm.ConexionSql = ConexionSql; // Pasar la conexión a la nueva instancia
+            frm.Show(); 
             this.Hide();
         }
         private void btninicio_Click(object sender, EventArgs e)
@@ -159,7 +158,6 @@ namespace Visual
             ConexionSql.Close();
             MostrarEntrada();
         }
-
         private void btnAgregarUsuarios_Click(object sender, EventArgs e)
         {
             string consulta = "INSERT INTO Usuario (Nombre, Apellido, Mail, Contraseña, TipoUsuario) " +
@@ -175,7 +173,6 @@ namespace Visual
             ConexionSql.Close();
             MostradorUsuarios();
         }
-
         private void btnEliminarUsuarios_Click(object sender, EventArgs e)
         {
             string consulta = "DELETE FROM Usuario WHERE ID = @ID";
@@ -186,7 +183,6 @@ namespace Visual
             ConexionSql.Close();
             MostradorUsuarios();
         }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             string consulta = "UPDATE Usuario SET " +
@@ -226,9 +222,9 @@ this.Hide();
 else
 {
 MessageBox.Show("Contraseña incorrecta",
-  "Error",
-  MessageBoxButtons.OK,
-  MessageBoxIcon.Error);
+"Error",
+MessageBoxButtons.OK,
+MessageBoxIcon.Error);
 }
 }
 else if (GestorPropietario.Instance.EncontrarMail(mail))
@@ -243,9 +239,9 @@ this.Hide();
 else
 {
 MessageBox.Show("Contraseña incorrecta",
-      "Error",
-      MessageBoxButtons.OK,
-      MessageBoxIcon.Error);
+"Error",
+MessageBoxButtons.OK,
+MessageBoxIcon.Error);
 }
 }
 else
