@@ -172,6 +172,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendedor\AgregarSectorEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\AgregarSectorEvento.Designer.cs">
+      <DependentUpon>AgregarSectorEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\frmAgregarEventoLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\frmAgregarEventoLocal.Designer.cs">
+      <DependentUpon>frmAgregarEventoLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\frmEventosLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\frmEventosLocal.Designer.cs">
+      <DependentUpon>frmEventosLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\frmMenuVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\frmMenuVendedor.Designer.cs">
+      <DependentUpon>frmMenuVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\frmMisLocales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\frmMisLocales.Designer.cs">
+      <DependentUpon>frmMisLocales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\frmModificarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\frmModificarEvento.Designer.cs">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\frmRegistrarLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\frmRegistrarLocal.Designer.cs">
+      <DependentUpon>frmRegistrarLocal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cliente\FrmCompraCliente.resx">
       <DependentUpon>FrmCompraCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +238,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vendedor\AgregarSectorEvento.resx">
+      <DependentUpon>AgregarSectorEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\frmAgregarEventoLocal.resx">
+      <DependentUpon>frmAgregarEventoLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\frmEventosLocal.resx">
+      <DependentUpon>frmEventosLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\frmMenuVendedor.resx">
+      <DependentUpon>frmMenuVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\frmMisLocales.resx">
+      <DependentUpon>frmMisLocales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\frmModificarEvento.resx">
+      <DependentUpon>frmModificarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\frmRegistrarLocal.resx">
+      <DependentUpon>frmRegistrarLocal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BddEventAura.xsc">
       <DependentUpon>BddEventAura.xsd</DependentUpon>
     </None>
