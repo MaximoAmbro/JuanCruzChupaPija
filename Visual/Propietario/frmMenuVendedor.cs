@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,29 +12,31 @@ using System.Windows.Forms;
 
 namespace Visual
 {
-    public partial class frmMenuCliente : Form
+    public partial class frmMenuVendedor : Form
     {
         public SqlConnection ConexionSql;
         public string NombreUsuario;
-        public frmMenuCliente()
+
+        public frmMenuVendedor()
         {
             InitializeComponent();
         }
-        private void frmMenuUsuario_Load(object sender, EventArgs e)
+
+        private void btnMisLocales_Click(object sender, EventArgs e)
+        {
+        }
+        private void btnRegistrarLocal_Click(object sender, EventArgs e)
+        {
+        }
+        private void frmMenuVendedor_Load(object sender, EventArgs e)
         {
             lblNombre.Text = NombreUsuario;
         }
-        private void btnEventos_Click(object sender, EventArgs e)
-        {
-        }
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-        }
         private void lblvolver_Click(object sender, EventArgs e)
         {
-            frmInicio frm = new frmInicio();
-            frm.Show();
-            this.Hide();
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.ConexionSql = ConexionSql;
+            frmInicio.Show(); this.Hide();
         }
     }
 }

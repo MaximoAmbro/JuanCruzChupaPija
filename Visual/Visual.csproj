@@ -140,11 +140,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BddEventAura.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\FrmCompraCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\FrmCompraCliente.Designer.cs">
+      <DependentUpon>FrmCompraCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmEventosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmEventosCliente.Designer.cs">
+      <DependentUpon>frmEventosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\frmHistorialCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmHistorialCliente.Designer.cs">
+      <DependentUpon>frmHistorialCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\frmMenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cliente\frmMenuCliente.Designer.cs">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Propietario\frmMenuVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propietario\frmMenuVendedor.Designer.cs">
+      <DependentUpon>frmMenuVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="_Inicio\frmCambiarContraseña.cs">
       <SubType>Form</SubType>
@@ -166,8 +190,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cliente\FrmCompraCliente.resx">
+      <DependentUpon>FrmCompraCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmEventosCliente.resx">
+      <DependentUpon>frmEventosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\frmHistorialCliente.resx">
+      <DependentUpon>frmHistorialCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cliente\frmMenuCliente.resx">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Propietario\frmMenuVendedor.resx">
+      <DependentUpon>frmMenuVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Inicio\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>

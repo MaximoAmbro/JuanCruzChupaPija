@@ -114,6 +114,5 @@ namespace Visual
                 }
             }
         } // Cambia la contraseña para la bdd
-
     }
 }

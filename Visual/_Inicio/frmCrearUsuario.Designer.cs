@@ -28,221 +28,223 @@
         /// </summary>
         private void InitializeComponent()
         {
-            checkbxShowPass = new System.Windows.Forms.CheckBox();
-            TxtConfirmpassword = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
-            TxtPassword = new System.Windows.Forms.TextBox();
-            label3 = new System.Windows.Forms.Label();
-            txtNombre = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
-            label6 = new System.Windows.Forms.Label();
-            lblmail = new System.Windows.Forms.Label();
-            txtmail = new System.Windows.Forms.TextBox();
-            lblyatengocuen = new System.Windows.Forms.Label();
-            btnregistrarse = new System.Windows.Forms.Button();
-            label5 = new System.Windows.Forms.Label();
-            txtApellido = new System.Windows.Forms.TextBox();
-            cbTipoUsuario = new System.Windows.Forms.ComboBox();
-            SuspendLayout();
+            this.checkbxShowPass = new System.Windows.Forms.CheckBox();
+            this.TxtConfirmpassword = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblmail = new System.Windows.Forms.Label();
+            this.txtmail = new System.Windows.Forms.TextBox();
+            this.lblyatengocuen = new System.Windows.Forms.Label();
+            this.btnregistrarse = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
             // 
             // checkbxShowPass
             // 
-            checkbxShowPass.AutoSize = true;
-            checkbxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            checkbxShowPass.Location = new System.Drawing.Point(314, 492);
-            checkbxShowPass.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            checkbxShowPass.Name = "checkbxShowPass";
-            checkbxShowPass.Size = new System.Drawing.Size(131, 23);
-            checkbxShowPass.TabIndex = 23;
-            checkbxShowPass.Text = "Show Password";
-            checkbxShowPass.UseVisualStyleBackColor = true;
-            checkbxShowPass.CheckedChanged += checkbxShowPass_CheckedChanged;
+            this.checkbxShowPass.AutoSize = true;
+            this.checkbxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkbxShowPass.Location = new System.Drawing.Point(314, 492);
+            this.checkbxShowPass.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.checkbxShowPass.Name = "checkbxShowPass";
+            this.checkbxShowPass.Size = new System.Drawing.Size(131, 23);
+            this.checkbxShowPass.TabIndex = 23;
+            this.checkbxShowPass.Text = "Show Password";
+            this.checkbxShowPass.UseVisualStyleBackColor = true;
+            this.checkbxShowPass.CheckedChanged += new System.EventHandler(this.checkbxShowPass_CheckedChanged);
             // 
             // TxtConfirmpassword
             // 
-            TxtConfirmpassword.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            TxtConfirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            TxtConfirmpassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            TxtConfirmpassword.Location = new System.Drawing.Point(98, 441);
-            TxtConfirmpassword.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            TxtConfirmpassword.Name = "TxtConfirmpassword";
-            TxtConfirmpassword.Size = new System.Drawing.Size(252, 27);
-            TxtConfirmpassword.TabIndex = 22;
+            this.TxtConfirmpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.TxtConfirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtConfirmpassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtConfirmpassword.Location = new System.Drawing.Point(98, 441);
+            this.TxtConfirmpassword.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.TxtConfirmpassword.Name = "TxtConfirmpassword";
+            this.TxtConfirmpassword.Size = new System.Drawing.Size(252, 27);
+            this.TxtConfirmpassword.TabIndex = 22;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(98, 405);
-            label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(156, 19);
-            label4.TabIndex = 21;
-            label4.Text = "Confirmar Contraseña";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(98, 405);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 19);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Confirmar Contraseña";
             // 
             // TxtPassword
             // 
-            TxtPassword.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            TxtPassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            TxtPassword.Location = new System.Drawing.Point(98, 347);
-            TxtPassword.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            TxtPassword.Name = "TxtPassword";
-            TxtPassword.PasswordChar = '*';
-            TxtPassword.Size = new System.Drawing.Size(252, 27);
-            TxtPassword.TabIndex = 20;
+            this.TxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(98, 347);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '*';
+            this.TxtPassword.Size = new System.Drawing.Size(252, 27);
+            this.TxtPassword.TabIndex = 20;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(98, 312);
-            label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(84, 19);
-            label3.TabIndex = 19;
-            label3.Text = "Contraseña";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(98, 312);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 19);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Contraseña";
             // 
             // txtNombre
             // 
-            txtNombre.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            txtNombre.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtNombre.Location = new System.Drawing.Point(98, 123);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new System.Drawing.Size(252, 27);
-            txtNombre.TabIndex = 34;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(98, 123);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(252, 27);
+            this.txtNombre.TabIndex = 34;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.ForeColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            label1.Location = new System.Drawing.Point(5, 30);
-            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(323, 50);
-            label1.TabIndex = 16;
-            label1.Text = "CREAR USUARIO ";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label1.Location = new System.Drawing.Point(5, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(323, 50);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "CREAR USUARIO ";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(98, 87);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(65, 19);
-            label6.TabIndex = 27;
-            label6.Text = "Nombre";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(98, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 19);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Nombre";
             // 
             // lblmail
             // 
-            lblmail.AutoSize = true;
-            lblmail.Location = new System.Drawing.Point(98, 234);
-            lblmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            lblmail.Name = "lblmail";
-            lblmail.Size = new System.Drawing.Size(38, 19);
-            lblmail.TabIndex = 29;
-            lblmail.Text = "Mail";
+            this.lblmail.AutoSize = true;
+            this.lblmail.Location = new System.Drawing.Point(98, 234);
+            this.lblmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblmail.Name = "lblmail";
+            this.lblmail.Size = new System.Drawing.Size(38, 19);
+            this.lblmail.TabIndex = 29;
+            this.lblmail.Text = "Mail";
             // 
             // txtmail
             // 
-            txtmail.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            txtmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            txtmail.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtmail.Location = new System.Drawing.Point(98, 270);
-            txtmail.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            txtmail.Name = "txtmail";
-            txtmail.Size = new System.Drawing.Size(252, 27);
-            txtmail.TabIndex = 30;
+            this.txtmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtmail.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmail.Location = new System.Drawing.Point(98, 270);
+            this.txtmail.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtmail.Name = "txtmail";
+            this.txtmail.Size = new System.Drawing.Size(252, 27);
+            this.txtmail.TabIndex = 30;
             // 
             // lblyatengocuen
             // 
-            lblyatengocuen.AutoSize = true;
-            lblyatengocuen.Cursor = System.Windows.Forms.Cursors.Hand;
-            lblyatengocuen.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lblyatengocuen.Location = new System.Drawing.Point(163, 628);
-            lblyatengocuen.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            lblyatengocuen.Name = "lblyatengocuen";
-            lblyatengocuen.Size = new System.Drawing.Size(121, 20);
-            lblyatengocuen.TabIndex = 31;
-            lblyatengocuen.Text = "Ya tengo cuenta";
-            lblyatengocuen.Click += lblyatengocuen_Click;
+            this.lblyatengocuen.AutoSize = true;
+            this.lblyatengocuen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblyatengocuen.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblyatengocuen.Location = new System.Drawing.Point(163, 628);
+            this.lblyatengocuen.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblyatengocuen.Name = "lblyatengocuen";
+            this.lblyatengocuen.Size = new System.Drawing.Size(121, 20);
+            this.lblyatengocuen.TabIndex = 31;
+            this.lblyatengocuen.Text = "Ya tengo cuenta";
+            this.lblyatengocuen.Click += new System.EventHandler(this.lblyatengocuen_Click);
             // 
             // btnregistrarse
             // 
-            btnregistrarse.BackColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            btnregistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnregistrarse.FlatAppearance.BorderSize = 0;
-            btnregistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnregistrarse.ForeColor = System.Drawing.Color.White;
-            btnregistrarse.Location = new System.Drawing.Point(98, 545);
-            btnregistrarse.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            btnregistrarse.Name = "btnregistrarse";
-            btnregistrarse.Size = new System.Drawing.Size(252, 53);
-            btnregistrarse.TabIndex = 32;
-            btnregistrarse.Text = "REGISTRARSE";
-            btnregistrarse.UseVisualStyleBackColor = false;
-            btnregistrarse.Click += btnregistrarse_Click;
+            this.btnregistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnregistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnregistrarse.FlatAppearance.BorderSize = 0;
+            this.btnregistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregistrarse.ForeColor = System.Drawing.Color.White;
+            this.btnregistrarse.Location = new System.Drawing.Point(98, 545);
+            this.btnregistrarse.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.btnregistrarse.Name = "btnregistrarse";
+            this.btnregistrarse.Size = new System.Drawing.Size(252, 53);
+            this.btnregistrarse.TabIndex = 32;
+            this.btnregistrarse.Text = "REGISTRARSE";
+            this.btnregistrarse.UseVisualStyleBackColor = false;
+            this.btnregistrarse.Click += new System.EventHandler(this.btnregistrarse_Click);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(98, 154);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(66, 19);
-            label5.TabIndex = 35;
-            label5.Text = "Apellido";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(98, 154);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 19);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Apellido";
             // 
             // txtApellido
             // 
-            txtApellido.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            txtApellido.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtApellido.Location = new System.Drawing.Point(98, 190);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new System.Drawing.Size(252, 27);
-            txtApellido.TabIndex = 36;
+            this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellido.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.Location = new System.Drawing.Point(98, 190);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(252, 27);
+            this.txtApellido.TabIndex = 36;
             // 
             // cbTipoUsuario
             // 
-            cbTipoUsuario.FormattingEnabled = true;
-            cbTipoUsuario.Items.AddRange(new object[] { "Cliente", "Propietario" });
-            cbTipoUsuario.Location = new System.Drawing.Point(146, 492);
-            cbTipoUsuario.Name = "cbTipoUsuario";
-            cbTipoUsuario.Size = new System.Drawing.Size(151, 27);
-            cbTipoUsuario.TabIndex = 37;
-            cbTipoUsuario.Text = "Cliente";
+            this.cbTipoUsuario.FormattingEnabled = true;
+            this.cbTipoUsuario.Items.AddRange(new object[] {
+            "Cliente",
+            "Propietario"});
+            this.cbTipoUsuario.Location = new System.Drawing.Point(146, 492);
+            this.cbTipoUsuario.Name = "cbTipoUsuario";
+            this.cbTipoUsuario.Size = new System.Drawing.Size(151, 27);
+            this.cbTipoUsuario.TabIndex = 37;
+            this.cbTipoUsuario.Text = "Cliente";
             // 
             // frmCrearUsuario
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.White;
-            ClientSize = new System.Drawing.Size(459, 671);
-            Controls.Add(cbTipoUsuario);
-            Controls.Add(label5);
-            Controls.Add(txtApellido);
-            Controls.Add(btnregistrarse);
-            Controls.Add(lblyatengocuen);
-            Controls.Add(txtmail);
-            Controls.Add(lblmail);
-            Controls.Add(label6);
-            Controls.Add(checkbxShowPass);
-            Controls.Add(TxtConfirmpassword);
-            Controls.Add(label4);
-            Controls.Add(TxtPassword);
-            Controls.Add(label3);
-            Controls.Add(txtNombre);
-            Controls.Add(label1);
-            Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            ForeColor = System.Drawing.Color.FromArgb(164, 165, 169);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Margin = new System.Windows.Forms.Padding(2);
-            Name = "frmCrearUsuario";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "frmCrearUsuario";
-            Load += frmCrearUsuario_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(459, 671);
+            this.Controls.Add(this.cbTipoUsuario);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.btnregistrarse);
+            this.Controls.Add(this.lblyatengocuen);
+            this.Controls.Add(this.txtmail);
+            this.Controls.Add(this.lblmail);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.checkbxShowPass);
+            this.Controls.Add(this.TxtConfirmpassword);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmCrearUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmCrearUsuario";
+            this.Load += new System.EventHandler(this.frmCrearUsuario_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
