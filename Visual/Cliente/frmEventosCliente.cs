@@ -51,6 +51,11 @@ namespace Visual
             {
                 MessageBox.Show("Debe seleccionar un evento para comprar", "Hola Pedro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }    
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

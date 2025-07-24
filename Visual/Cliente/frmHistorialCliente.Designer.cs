@@ -28,66 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnVolver = new System.Windows.Forms.Button();
-            dgvHistorial = new System.Windows.Forms.DataGridView();
-            label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)dgvHistorial).BeginInit();
-            SuspendLayout();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.dgvHistorial = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
+            this.SuspendLayout();
             // 
             // btnVolver
             // 
-            btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnVolver.Location = new System.Drawing.Point(374, 441);
-            btnVolver.Margin = new System.Windows.Forms.Padding(2);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new System.Drawing.Size(241, 43);
-            btnVolver.TabIndex = 0;
-            btnVolver.Text = "Volver";
-            btnVolver.UseVisualStyleBackColor = true;
-            btnVolver.Click += btnVolver_Click;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.Location = new System.Drawing.Point(367, 441);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(241, 43);
+            this.btnVolver.TabIndex = 0;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = true;
             // 
             // dgvHistorial
             // 
-            dgvHistorial.BackgroundColor = System.Drawing.Color.White;
-            dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            dgvHistorial.Location = new System.Drawing.Point(37, 90);
-            dgvHistorial.Name = "dgvHistorial";
-            dgvHistorial.RowHeadersWidth = 62;
-            dgvHistorial.Size = new System.Drawing.Size(897, 321);
-            dgvHistorial.TabIndex = 1;
+            this.dgvHistorial.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvHistorial.Location = new System.Drawing.Point(89, 72);
+            this.dgvHistorial.Name = "dgvHistorial";
+            this.dgvHistorial.RowHeadersWidth = 62;
+            this.dgvHistorial.Size = new System.Drawing.Size(897, 321);
+            this.dgvHistorial.TabIndex = 1;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.ForeColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            label1.Location = new System.Drawing.Point(299, 9);
-            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(335, 50);
-            label1.TabIndex = 28;
-            label1.Text = "Historial Compras";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label1.Location = new System.Drawing.Point(299, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(397, 60);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Historial Compras";
             // 
-            // frmHistorial
+            // frmHistorialCliente
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.White;
-            ClientSize = new System.Drawing.Size(937, 495);
-            Controls.Add(label1);
-            Controls.Add(dgvHistorial);
-            Controls.Add(btnVolver);
-            Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            ForeColor = System.Drawing.Color.FromArgb(164, 165, 169);
-            Margin = new System.Windows.Forms.Padding(2);
-            Name = "frmHistorial";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "frmHistorial";
-            Load += frmHistorial_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvHistorial).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(937, 495);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvHistorial);
+            this.Controls.Add(this.btnVolver);
+            this.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmHistorialCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmHistorial";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
