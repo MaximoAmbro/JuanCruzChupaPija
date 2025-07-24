@@ -28,164 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnVolver = new System.Windows.Forms.Button();
-            checkbxShowPass = new System.Windows.Forms.CheckBox();
-            TxtConfirmpassword = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
-            TxtPassword = new System.Windows.Forms.TextBox();
-            label3 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
-            btnconfirmar = new System.Windows.Forms.Button();
-            txtMail = new System.Windows.Forms.TextBox();
-            label5 = new System.Windows.Forms.Label();
-            SuspendLayout();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.checkbxShowPass = new System.Windows.Forms.CheckBox();
+            this.TxtConfirmpassword = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnconfirmar = new System.Windows.Forms.Button();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // btnVolver
             // 
-            btnVolver.BackColor = System.Drawing.Color.White;
-            btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnVolver.Location = new System.Drawing.Point(5, 561);
-            btnVolver.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new System.Drawing.Size(119, 43);
-            btnVolver.TabIndex = 1;
-            btnVolver.Text = "Volver ";
-            btnVolver.UseVisualStyleBackColor = false;
-            btnVolver.Click += btnVolver_Click_1;
+            this.btnVolver.BackColor = System.Drawing.Color.White;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.Location = new System.Drawing.Point(5, 449);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(119, 34);
+            this.btnVolver.TabIndex = 1;
+            this.btnVolver.Text = "Volver ";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // checkbxShowPass
             // 
-            checkbxShowPass.AutoSize = true;
-            checkbxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            checkbxShowPass.Location = new System.Drawing.Point(246, 491);
-            checkbxShowPass.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
-            checkbxShowPass.Name = "checkbxShowPass";
-            checkbxShowPass.Size = new System.Drawing.Size(128, 24);
-            checkbxShowPass.TabIndex = 36;
-            checkbxShowPass.Text = "Show Password";
-            checkbxShowPass.UseVisualStyleBackColor = true;
-            checkbxShowPass.CheckedChanged += checkbxShowPass_CheckedChanged;
+            this.checkbxShowPass.AutoSize = true;
+            this.checkbxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkbxShowPass.Location = new System.Drawing.Point(246, 393);
+            this.checkbxShowPass.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            this.checkbxShowPass.Name = "checkbxShowPass";
+            this.checkbxShowPass.Size = new System.Drawing.Size(121, 20);
+            this.checkbxShowPass.TabIndex = 36;
+            this.checkbxShowPass.Text = "Show Password";
+            this.checkbxShowPass.UseVisualStyleBackColor = true;
             // 
             // TxtConfirmpassword
             // 
-            TxtConfirmpassword.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            TxtConfirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            TxtConfirmpassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            TxtConfirmpassword.Location = new System.Drawing.Point(38, 350);
-            TxtConfirmpassword.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
-            TxtConfirmpassword.Multiline = true;
-            TxtConfirmpassword.Name = "TxtConfirmpassword";
-            TxtConfirmpassword.Size = new System.Drawing.Size(336, 43);
-            TxtConfirmpassword.TabIndex = 35;
+            this.TxtConfirmpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.TxtConfirmpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtConfirmpassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtConfirmpassword.Location = new System.Drawing.Point(38, 280);
+            this.TxtConfirmpassword.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            this.TxtConfirmpassword.Multiline = true;
+            this.TxtConfirmpassword.Name = "TxtConfirmpassword";
+            this.TxtConfirmpassword.Size = new System.Drawing.Size(336, 34);
+            this.TxtConfirmpassword.TabIndex = 35;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(35, 319);
-            label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(153, 20);
-            label4.TabIndex = 34;
-            label4.Text = "Confirmar Contraseña";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 255);
+            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 16);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Confirmar Contraseña";
             // 
             // TxtPassword
             // 
-            TxtPassword.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            TxtPassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            TxtPassword.Location = new System.Drawing.Point(38, 251);
-            TxtPassword.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
-            TxtPassword.Multiline = true;
-            TxtPassword.Name = "TxtPassword";
-            TxtPassword.Size = new System.Drawing.Size(336, 43);
-            TxtPassword.TabIndex = 33;
+            this.TxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(38, 201);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            this.TxtPassword.Multiline = true;
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(336, 34);
+            this.TxtPassword.TabIndex = 33;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(35, 221);
-            label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(129, 20);
-            label3.TabIndex = 32;
-            label3.Text = "Nueva Contraseña";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 177);
+            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 16);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Nueva Contraseña";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.ForeColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            label1.Location = new System.Drawing.Point(18, 77);
-            label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(405, 50);
-            label1.TabIndex = 29;
-            label1.Text = "NUEVA CONTRASEÑA";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label1.Location = new System.Drawing.Point(18, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(405, 50);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "NUEVA CONTRASEÑA";
             // 
             // btnconfirmar
             // 
-            btnconfirmar.BackColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            btnconfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnconfirmar.FlatAppearance.BorderSize = 0;
-            btnconfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnconfirmar.ForeColor = System.Drawing.Color.White;
-            btnconfirmar.Location = new System.Drawing.Point(35, 430);
-            btnconfirmar.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
-            btnconfirmar.Name = "btnconfirmar";
-            btnconfirmar.Size = new System.Drawing.Size(336, 53);
-            btnconfirmar.TabIndex = 40;
-            btnconfirmar.Text = "CONFIRMAR";
-            btnconfirmar.UseVisualStyleBackColor = false;
-            btnconfirmar.Click += btnconfirmar_Click;
+            this.btnconfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnconfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnconfirmar.FlatAppearance.BorderSize = 0;
+            this.btnconfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnconfirmar.Location = new System.Drawing.Point(35, 344);
+            this.btnconfirmar.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            this.btnconfirmar.Name = "btnconfirmar";
+            this.btnconfirmar.Size = new System.Drawing.Size(336, 42);
+            this.btnconfirmar.TabIndex = 40;
+            this.btnconfirmar.Text = "CONFIRMAR";
+            this.btnconfirmar.UseVisualStyleBackColor = false;
+            this.btnconfirmar.Click += new System.EventHandler(this.btnconfirmar_Click);
             // 
             // txtMail
             // 
-            txtMail.BackColor = System.Drawing.Color.FromArgb(230, 231, 233);
-            txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            txtMail.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtMail.Location = new System.Drawing.Point(38, 174);
-            txtMail.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
-            txtMail.Multiline = true;
-            txtMail.Name = "txtMail";
-            txtMail.Size = new System.Drawing.Size(336, 43);
-            txtMail.TabIndex = 42;
+            this.txtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMail.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMail.Location = new System.Drawing.Point(38, 139);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            this.txtMail.Multiline = true;
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(336, 34);
+            this.txtMail.TabIndex = 42;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(35, 143);
-            label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(38, 20);
-            label5.TabIndex = 41;
-            label5.Text = "Mail";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 112);
+            this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Nombre";
             // 
             // frmCambiarContraseña
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.White;
-            ClientSize = new System.Drawing.Size(434, 611);
-            Controls.Add(txtMail);
-            Controls.Add(label5);
-            Controls.Add(btnconfirmar);
-            Controls.Add(checkbxShowPass);
-            Controls.Add(TxtConfirmpassword);
-            Controls.Add(label4);
-            Controls.Add(TxtPassword);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(btnVolver);
-            ForeColor = System.Drawing.Color.FromArgb(164, 165, 169);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            Name = "frmCambiarContraseña";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "frmCambiarContraseña";
-            Load += frmCambiarContraseña_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(434, 489);
+            this.Controls.Add(this.txtMail);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnconfirmar);
+            this.Controls.Add(this.checkbxShowPass);
+            this.Controls.Add(this.TxtConfirmpassword);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnVolver);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmCambiarContraseña";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmCambiarContraseña";
+            this.Load += new System.EventHandler(this.frmCambiarContraseña_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

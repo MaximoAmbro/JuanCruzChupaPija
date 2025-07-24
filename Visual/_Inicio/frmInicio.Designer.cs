@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtUsername = new System.Windows.Forms.TextBox();
-            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.txtMailLogin = new System.Windows.Forms.TextBox();
+            this.txtContraseñaLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.checkbxShowPass = new System.Windows.Forms.CheckBox();
             this.lblolividarcontra = new System.Windows.Forms.Label();
@@ -54,26 +54,26 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TxtUsername
+            // txtMailLogin
             // 
-            this.TxtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.TxtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsername.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsername.Location = new System.Drawing.Point(97, 259);
-            this.TxtUsername.Name = "TxtUsername";
-            this.TxtUsername.Size = new System.Drawing.Size(227, 27);
-            this.TxtUsername.TabIndex = 5;
-            this.TxtUsername.TabStop = false;
+            this.txtMailLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtMailLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMailLogin.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMailLogin.Location = new System.Drawing.Point(97, 259);
+            this.txtMailLogin.Name = "txtMailLogin";
+            this.txtMailLogin.Size = new System.Drawing.Size(227, 27);
+            this.txtMailLogin.TabIndex = 5;
+            this.txtMailLogin.TabStop = false;
             // 
-            // TxtPassword
+            // txtContraseñaLogin
             // 
-            this.TxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtPassword.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPassword.Location = new System.Drawing.Point(97, 367);
-            this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(227, 27);
-            this.TxtPassword.TabIndex = 7;
+            this.txtContraseñaLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtContraseñaLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseñaLogin.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaLogin.Location = new System.Drawing.Point(97, 367);
+            this.txtContraseñaLogin.Name = "txtContraseñaLogin";
+            this.txtContraseñaLogin.Size = new System.Drawing.Size(227, 27);
+            this.txtContraseñaLogin.TabIndex = 7;
             // 
             // label3
             // 
@@ -105,6 +105,7 @@
             this.lblolividarcontra.Size = new System.Drawing.Size(212, 23);
             this.lblolividarcontra.TabIndex = 18;
             this.lblolividarcontra.Text = "¿Olvidaste tu contraseña?";
+            this.lblolividarcontra.Click += new System.EventHandler(this.lblolividarcontra_Click);
             // 
             // lblcrearcuenta
             // 
@@ -131,15 +132,16 @@
             this.btninicio.TabIndex = 20;
             this.btninicio.Text = "INICIAR SESION ";
             this.btninicio.UseVisualStyleBackColor = false;
+            this.btninicio.Click += new System.EventHandler(this.btninicio_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(97, 216);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 23);
+            this.label5.Size = new System.Drawing.Size(45, 23);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Usuario";
+            this.label5.Text = "Mail";
             // 
             // label2
             // 
@@ -313,9 +315,9 @@
             this.Controls.Add(this.lblcrearcuenta);
             this.Controls.Add(this.lblolividarcontra);
             this.Controls.Add(this.checkbxShowPass);
-            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.txtContraseñaLogin);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TxtUsername);
+            this.Controls.Add(this.txtMailLogin);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -329,8 +331,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox TxtUsername;
-        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.TextBox txtMailLogin;
+        private System.Windows.Forms.TextBox txtContraseñaLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkbxShowPass;
         private System.Windows.Forms.Label lblolividarcontra;

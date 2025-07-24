@@ -140,6 +140,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BddEventAura.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\frmMenuCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\frmMenuCliente.Designer.cs">
+      <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Inicio\frmCambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cliente\frmMenuCliente.resx">
+      <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_Inicio\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>

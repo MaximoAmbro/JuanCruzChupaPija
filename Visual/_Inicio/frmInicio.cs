@@ -22,29 +22,29 @@ namespace Visual
     public partial class frmInicio : Form
     {
 
-        SqlConnection ConexionSql;
+        public SqlConnection ConexionSql;
         public frmInicio()
         {
             InitializeComponent();
             string miConexion =
             ConfigurationManager.ConnectionStrings["Visual.Properties.Settings.BddEventAura"].ConnectionString;
-            ConexionSql = new SqlConnection(miConexion);            
+            ConexionSql = new SqlConnection(miConexion);
             /*  GestorClientes.Instance.CargarLista();
             GestorPropietario.Instance.CargarLista(); */
         }
         private void frmInicio_Load(object sender, EventArgs e)
         {
-            TxtUsername.Text = "";
-            TxtPassword.Text = "";
-            TxtPassword.PasswordChar = '*';
-            MostradorUsuarios(); 
+            txtMailLogin.Text = "";
+            txtContraseñaLogin.Text = "";
+            txtContraseñaLogin.PasswordChar = '*';
+            MostradorUsuarios();
         }
         private void MostradorUsuarios()
         {
             try
-            {        
-            string consulta = "SELECT * FROM Usuario";
-            SqlDataAdapter miAdaptador = new SqlDataAdapter(consulta, ConexionSql);
+            {
+                string consulta = "SELECT * FROM Usuario";
+                SqlDataAdapter miAdaptador = new SqlDataAdapter(consulta, ConexionSql);
 
                 using (miAdaptador)
                 {
@@ -62,8 +62,9 @@ namespace Visual
                     lstUsuarios.DisplayMember = "NombreTipo";
                     lstUsuarios.ValueMember = "ID";
                     lstUsuarios.DataSource = dataTable.DefaultView;
-                } 
-            } catch (Exception ex)
+                }
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -98,29 +99,30 @@ namespace Visual
         {
             if (checkbxShowPass.Checked == true)
             {
-                TxtPassword.PasswordChar = '\0';
+                txtContraseñaLogin.PasswordChar = '\0';
             }
             else
             {
-                TxtPassword.PasswordChar = '*';
+                txtContraseñaLogin.PasswordChar = '*';
             }
-        } //ya está
+        } //Le pone el asterisco a la contraseña
         private void lblolividarcontra_Click(object sender, EventArgs e)
         {
-            /* frmCambiarContraseña frm = new frmCambiarContraseña();
-             frm.Show();*/
+            frmCambiarContraseña frm = new frmCambiarContraseña();
+            frm.ConexionSql = ConexionSql;
+            frm.Show();
             this.Hide();
-        }
+        } // Llama frmCambiarContraseña
         private void lblcrearcuenta_Click(object sender, EventArgs e)
         {
             frmCrearUsuario frm = new frmCrearUsuario();
             frm.ConexionSql = ConexionSql; // Pasar la conexión a la nueva instancia
-            frm.Show(); 
+            frm.Show();
             this.Hide();
         }
         private void btninicio_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtUsername.Text))
+            if (string.IsNullOrEmpty(txtMailLogin.Text))
             {
                 MessageBox.Show("Por favor, ingrese usuario",
                               "Campo vacíos",
@@ -128,7 +130,7 @@ namespace Visual
                               MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrEmpty(TxtPassword.Text))
+            if (string.IsNullOrEmpty(txtContraseñaLogin.Text))
             {
                 MessageBox.Show("Por favor, ingrese contraseña",
                               "Campo vacíos",
@@ -138,7 +140,7 @@ namespace Visual
             }
             else
             {
-                //ValidarLista(TxtUsername.Text, TxtPassword.Text);
+                ValidarLista(txtMailLogin.Text, txtContraseñaLogin.Text);
             }
         }
         private void lstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
@@ -185,72 +187,47 @@ namespace Visual
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            string consulta = "UPDATE Usuario SET " +
-                      "Nombre = @Nombre, " +
-                      "Apellido = @Apellido, " +
-                      "Mail = @Mail, " +
-                      "Contraseña = @Contraseña, " +
-                      "TipoUsuario = @TipoUsuario " +
-                      "WHERE ID = @ID";
+
+        }
+
+        public void ValidarLista(string mail, string contraseña)
+        {
+            string consulta = "SELECT TipoUsuario FROM Usuario WHERE Mail = @Mail AND Contraseña = @Contraseña";
 
             using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
             {
-                sqlcomando.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                sqlcomando.Parameters.AddWithValue("@Apellido", txtApellido.Text);
-                sqlcomando.Parameters.AddWithValue("@Mail", txtMail.Text);
-                sqlcomando.Parameters.AddWithValue("@Contraseña", txtContraseña.Text);
-                sqlcomando.Parameters.AddWithValue("@TipoUsuario", cbTipoDeUsuario.Text);
-                sqlcomando.Parameters.AddWithValue("@ID", lstUsuarios.SelectedValue); 
+                sqlcomando.Parameters.AddWithValue("@Mail", txtMailLogin.Text);
+                sqlcomando.Parameters.AddWithValue("@Contraseña", txtContraseñaLogin.Text);
 
                 ConexionSql.Open();
-                sqlcomando.ExecuteNonQuery();
+                object resultado = sqlcomando.ExecuteScalar(); 
                 ConexionSql.Close();
+
+                if (resultado != null)
+                {
+                    string tipoUsuario = resultado.ToString();
+
+                    if (tipoUsuario == "Cliente")
+                    {
+                        frmMenuCliente frm = new frmMenuCliente();
+                        frm.ConexionSql = ConexionSql;
+                        frm.Show();
+                        this.Hide();
+                    }
+                    else if (tipoUsuario == "Propietario")
+                    {
+                        MessageBox.Show("Bienvenido propietario.");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Bienvenido usuario tipo: {tipoUsuario}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Correo o contraseña incorrectos.");
+                }
             }
-            MostradorUsuarios();
         }
-        /*public void ValidarLista(string mail, string contraseña)
-{
-if (GestorClientes.Instance.EncontrarMail(mail))
-{
-if (GestorClientes.Instance.EncontrarContraseña(contraseña, mail))
-{
-frmMenuCliente frm = new frmMenuCliente();
-frm.Mail = mail;
-frm.Show();
-this.Hide();
-}
-else
-{
-MessageBox.Show("Contraseña incorrecta",
-"Error",
-MessageBoxButtons.OK,
-MessageBoxIcon.Error);
-}
-}
-else if (GestorPropietario.Instance.EncontrarMail(mail))
-{
-if (GestorPropietario.Instance.EncontrarContraseña(contraseña, mail))
-{
-frmMenuVendedor frm = new frmMenuVendedor();
-frm.Mail = mail;
-frm.Show();
-this.Hide();
-}
-else
-{
-MessageBox.Show("Contraseña incorrecta",
-"Error",
-MessageBoxButtons.OK,
-MessageBoxIcon.Error);
-}
-}
-else
-{
-MessageBox.Show("Usuario no registrado",
-"Error",
-MessageBoxButtons.OK,
-MessageBoxIcon.Error);
-}
-}*/
     }
 }
