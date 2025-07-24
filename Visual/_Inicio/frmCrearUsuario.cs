@@ -44,15 +44,13 @@ namespace Visual
         } // El de la contraseña
         private void lblyatengocuen_Click(object sender, EventArgs e)
         {
-            frmInicio frm = new frmInicio();
-            frm.Show();
-            this.Hide();
+            Cerrar();
         } // Nos devuelve al incio
         private void btnregistrarse_Click(object sender, EventArgs e)
         {
             if (RevisarTextbox()== true)
             {
-                ValidarLista(txtmail.Text);
+                ValidarLista();
             }
             else { return; }
         }
@@ -95,7 +93,7 @@ namespace Visual
                 return true;
             }
         } // Revisa si los textbox estan vacios
-        public void ValidarLista(string mail)
+        public void ValidarLista()
         {
             string consulta = "INSERT INTO Usuario (Nombre, Apellido, Mail, Contraseña, TipoUsuario) " +
                 "VALUES (@Nombre, @Apellido, @Mail, @Contraseña, @TipoUsuario)";
@@ -108,7 +106,17 @@ namespace Visual
             sqlComando.Parameters.AddWithValue("@TipoUsuario", cbTipoUsuario.Text);
             sqlComando.ExecuteNonQuery();
             ConexionSql.Close();
+            MessageBox.Show("Usuario creado correctamente");
+            Cerrar();
         } // Funcionamiento del formulario (agrega todo a la database)
+        private void Cerrar()
+        {
+            frmInicio frm = new frmInicio();
+            frm.ConexionSql = ConexionSql;
+            frm.Show();
+            this.Hide();
+        } // cierra el form
+
     }
 }
     
