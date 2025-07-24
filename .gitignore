@@ -1,0 +1,14 @@
+.vs/
+obj/
+bin/
+*.user
+*.suo
+*.cache
+*.db
+*.db-shm
+*.db-wal
+*.AssemblyInfo.cs
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.AssemblyReference.cache
+*.csproj.nuget.dgspec.json
+*.nuget.cache
