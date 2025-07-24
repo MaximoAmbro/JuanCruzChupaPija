@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio", "Negocio\Repositorio.csproj", "{499BB0D9-F994-489B-83FF-A81493E2D94E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViejoVisual", "Visual_\ViejoVisual.csproj", "{8D36926F-86BE-4422-BD36-43D232E395FA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visual", "Visual\Visual.csproj", "{C9806678-35BF-46DF-9C57-A1918BA1F483}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{499BB0D9-F994-489B-83FF-A81493E2D94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{499BB0D9-F994-489B-83FF-A81493E2D94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{499BB0D9-F994-489B-83FF-A81493E2D94E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D36926F-86BE-4422-BD36-43D232E395FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D36926F-86BE-4422-BD36-43D232E395FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D36926F-86BE-4422-BD36-43D232E395FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D36926F-86BE-4422-BD36-43D232E395FA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C9806678-35BF-46DF-9C57-A1918BA1F483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9806678-35BF-46DF-9C57-A1918BA1F483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9806678-35BF-46DF-9C57-A1918BA1F483}.Release|Any CPU.ActiveCfg = Release|Any CPU
