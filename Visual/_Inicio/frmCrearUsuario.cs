@@ -1,25 +1,22 @@
-﻿using Negocio;
-using Repositorio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Visual
 {
     public partial class frmCrearUsuario : Form
     {
+        public SqlConnection ConexionSql;
         public frmCrearUsuario()
         {
             InitializeComponent();
-
         }
         private void frmCrearUsuario_Load(object sender, EventArgs e)
         {
@@ -31,7 +28,7 @@ namespace Visual
             TxtConfirmpassword.Text = "A";
             TxtPassword.PasswordChar = '*';
             TxtConfirmpassword.PasswordChar='*';
-        }
+        }  // El Load del formulario
         private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if(checkbxShowPass.Checked == true)
@@ -44,13 +41,13 @@ namespace Visual
                 TxtPassword.PasswordChar = '*';
                 TxtConfirmpassword.PasswordChar = '*';
             }
-        }
+        } // El de la contraseña
         private void lblyatengocuen_Click(object sender, EventArgs e)
         {
             frmInicio frm = new frmInicio();
             frm.Show();
             this.Hide();
-        }
+        } // Nos devuelve al incio
         private void btnregistrarse_Click(object sender, EventArgs e)
         {
             if (RevisarTextbox()== true)
@@ -70,7 +67,6 @@ namespace Visual
             {
                 MessageBox.Show("Ingrese Usuario: ");
                 return false;
-
             }
             if (string.IsNullOrEmpty(txtmail.Text))
             {
@@ -98,50 +94,21 @@ namespace Visual
             {
                 return true;
             }
-        }
+        } // Revisa si los textbox estan vacios
         public void ValidarLista(string mail)
         {
-            if (cbTipoUsuario.Text == "Cliente")
-            {
-                if (GestorClientes.Instance.EncontrarMail(mail) == true)
-                {
-                    MessageBox.Show("Mail: " + mail + " ya está registrado");
-                }
-                if (GestorPropietario.Instance.EncontrarMail(mail) == true)
-                {
-                    MessageBox.Show("Mail: " + mail + " ya está registrado como propietario");
-                }
-
-                else
-                {
-                    GestorClientes.Instance.AgregarCliente(txtNombre.Text, txtApellido.Text, txtmail.Text, TxtPassword.Text);
-                    MessageBox.Show("Usuario creado");
-                    frmInicio frm = new frmInicio();
-                    frm.Show();
-                    this.Hide();
-                }
-            }
-            if (cbTipoUsuario.Text == "Propietario")
-            {
-                if (GestorPropietario.Instance.EncontrarMail(mail) == true)
-                {
-                    MessageBox.Show("Mail: " + mail + " ya está registrado");
-                }
-                if (GestorClientes.Instance.EncontrarMail(mail) == true)
-                {
-                    MessageBox.Show("Mail: " + mail + " ya está registrado como cliente");
-                }
-                else
-                {
-                    GestorPropietario.Instance.AgregarPropietario(txtNombre.Text, txtApellido.Text, txtmail.Text, TxtPassword.Text);
-                    MessageBox.Show("Usuario creado");
-                    frmInicio frm = new frmInicio();
-                    frm.Show();
-                    this.Hide();
-                }
-            }
-        }
-
+            string consulta = "INSERT INTO Usuario (Nombre, Apellido, Mail, Contraseña, TipoUsuario) " +
+                "VALUES (@Nombre, @Apellido, @Mail, @Contraseña, @TipoUsuario)";
+            SqlCommand sqlComando = new SqlCommand(consulta, ConexionSql);
+            ConexionSql.Open();
+            sqlComando.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+            sqlComando.Parameters.AddWithValue("@Apellido", txtApellido.Text);
+            sqlComando.Parameters.AddWithValue("@Mail", txtmail.Text);
+            sqlComando.Parameters.AddWithValue("@Contraseña", TxtPassword.Text);
+            sqlComando.Parameters.AddWithValue("@TipoUsuario", cbTipoUsuario.Text);
+            sqlComando.ExecuteNonQuery();
+            ConexionSql.Close();
+        } // Funcionamiento del formulario (agrega todo a la database)
     }
 }
     

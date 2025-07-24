@@ -116,6 +116,7 @@
             this.lblcrearcuenta.Size = new System.Drawing.Size(114, 23);
             this.lblcrearcuenta.TabIndex = 19;
             this.lblcrearcuenta.Text = "Crear Cuenta";
+            this.lblcrearcuenta.Click += new System.EventHandler(this.lblcrearcuenta_Click);
             // 
             // btninicio
             // 
