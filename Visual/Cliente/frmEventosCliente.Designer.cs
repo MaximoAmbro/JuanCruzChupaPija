@@ -40,7 +40,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.White;
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.btnVolver.Location = new System.Drawing.Point(385, 394);
+            this.btnVolver.Location = new System.Drawing.Point(11, 450);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(121, 33);
@@ -54,12 +54,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label2.Location = new System.Drawing.Point(308, 9);
+            this.label2.Location = new System.Drawing.Point(329, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 62);
+            this.label2.Size = new System.Drawing.Size(237, 74);
             this.label2.TabIndex = 28;
-            this.label2.Text = "EVENTOS";
+            this.label2.Text = "Eventos";
             // 
             // dgveventos
             // 
@@ -69,10 +69,10 @@
             this.dgveventos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgveventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgveventos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgveventos.Location = new System.Drawing.Point(5, 108);
+            this.dgveventos.Location = new System.Drawing.Point(40, 99);
             this.dgveventos.Name = "dgveventos";
             this.dgveventos.RowHeadersWidth = 51;
-            this.dgveventos.Size = new System.Drawing.Size(876, 233);
+            this.dgveventos.Size = new System.Drawing.Size(876, 262);
             this.dgveventos.TabIndex = 29;
             // 
             // btnComprar
@@ -82,21 +82,21 @@
             this.btnComprar.FlatAppearance.BorderSize = 0;
             this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprar.ForeColor = System.Drawing.Color.White;
-            this.btnComprar.Location = new System.Drawing.Point(342, 347);
+            this.btnComprar.Location = new System.Drawing.Point(342, 405);
             this.btnComprar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(215, 42);
             this.btnComprar.TabIndex = 36;
-            this.btnComprar.Text = "COMPRAR";
+            this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = false;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // frmEventosCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(893, 438);
+            this.ClientSize = new System.Drawing.Size(928, 494);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.dgveventos);
             this.Controls.Add(this.label2);

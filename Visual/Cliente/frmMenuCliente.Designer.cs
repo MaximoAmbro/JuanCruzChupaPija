@@ -28,100 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnEventos = new System.Windows.Forms.Button();
-            btnHistorial = new System.Windows.Forms.Button();
-            label1 = new System.Windows.Forms.Label();
-            lblvolver = new System.Windows.Forms.Label();
-            lblNombre = new System.Windows.Forms.Label();
-            SuspendLayout();
+            this.btnEventos = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblvolver = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // btnEventos
             // 
-            btnEventos.BackColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            btnEventos.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnEventos.ForeColor = System.Drawing.Color.White;
-            btnEventos.Location = new System.Drawing.Point(95, 186);
-            btnEventos.Margin = new System.Windows.Forms.Padding(2);
-            btnEventos.Name = "btnEventos";
-            btnEventos.Size = new System.Drawing.Size(309, 113);
-            btnEventos.TabIndex = 5;
-            btnEventos.Text = "Eventos disponibles";
-            btnEventos.UseVisualStyleBackColor = false;
-            btnEventos.Click += btnEventos_Click;
+            this.btnEventos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnEventos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEventos.ForeColor = System.Drawing.Color.White;
+            this.btnEventos.Location = new System.Drawing.Point(80, 298);
+            this.btnEventos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEventos.Name = "btnEventos";
+            this.btnEventos.Size = new System.Drawing.Size(309, 94);
+            this.btnEventos.TabIndex = 5;
+            this.btnEventos.Text = "Eventos disponibles";
+            this.btnEventos.UseVisualStyleBackColor = false;
             // 
             // btnHistorial
             // 
-            btnHistorial.BackColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnHistorial.ForeColor = System.Drawing.Color.White;
-            btnHistorial.Location = new System.Drawing.Point(95, 339);
-            btnHistorial.Margin = new System.Windows.Forms.Padding(2);
-            btnHistorial.Name = "btnHistorial";
-            btnHistorial.Size = new System.Drawing.Size(309, 111);
-            btnHistorial.TabIndex = 6;
-            btnHistorial.Text = "Mis eventos";
-            btnHistorial.UseVisualStyleBackColor = false;
-            btnHistorial.Click += btnHistorial_Click;
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.Location = new System.Drawing.Point(80, 451);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(309, 92);
+            this.btnHistorial.TabIndex = 6;
+            this.btnHistorial.Text = "Mis eventos";
+            this.btnHistorial.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.ForeColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            label1.Location = new System.Drawing.Point(14, 74);
-            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(228, 50);
-            label1.TabIndex = 30;
-            label1.Text = "Bienvenido ";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label1.Location = new System.Drawing.Point(99, 83);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(271, 60);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Bienvenido ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblvolver
             // 
-            lblvolver.AutoSize = true;
-            lblvolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            lblvolver.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lblvolver.ForeColor = System.Drawing.Color.FromArgb(164, 165, 169);
-            lblvolver.Location = new System.Drawing.Point(156, 494);
-            lblvolver.Name = "lblvolver";
-            lblvolver.Size = new System.Drawing.Size(189, 28);
-            lblvolver.TabIndex = 32;
-            lblvolver.Text = "VOLVER AL INICIO ";
-            lblvolver.Click += lblvolver_Click;
+            this.lblvolver.AutoSize = true;
+            this.lblvolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblvolver.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.lblvolver.Location = new System.Drawing.Point(137, 629);
+            this.lblvolver.Name = "lblvolver";
+            this.lblvolver.Size = new System.Drawing.Size(189, 28);
+            this.lblvolver.TabIndex = 32;
+            this.lblvolver.Text = "VOLVER AL INICIO ";
             // 
             // lblNombre
             // 
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lblNombre.ForeColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            lblNombre.Location = new System.Drawing.Point(240, 74);
-            lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new System.Drawing.Size(214, 50);
-            lblNombre.TabIndex = 33;
-            lblNombre.Text = "[USUARIO]";
-            lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.lblNombre.Location = new System.Drawing.Point(118, 157);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(252, 60);
+            this.lblNombre.TabIndex = 33;
+            this.lblNombre.Text = "[USUARIO]";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frmMenuUsuario
+            // frmMenuCliente
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.White;
-            ClientSize = new System.Drawing.Size(498, 586);
-            Controls.Add(lblNombre);
-            Controls.Add(lblvolver);
-            Controls.Add(label1);
-            Controls.Add(btnHistorial);
-            Controls.Add(btnEventos);
-            Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Margin = new System.Windows.Forms.Padding(2);
-            Name = "frmMenuUsuario";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "frmMenuUsuario";
-            Load += frmMenuUsuario_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(473, 714);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblvolver);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnHistorial);
+            this.Controls.Add(this.btnEventos);
+            this.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmMenuCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmMenuUsuario";
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -50,11 +50,12 @@
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(36, 312);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnVolver.Location = new System.Drawing.Point(15, 449);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(119, 42);
+            this.btnVolver.Size = new System.Drawing.Size(134, 34);
             this.btnVolver.TabIndex = 47;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -63,19 +64,19 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 80);
+            this.label6.Location = new System.Drawing.Point(8, 126);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 16);
+            this.label6.Size = new System.Drawing.Size(142, 20);
             this.label6.TabIndex = 44;
             this.label6.Text = "Nombre del evento";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 132);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(8, 196);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 39;
             this.label3.Text = "Fecha";
             // 
@@ -84,10 +85,10 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(37, 109);
+            this.txtNombre.Location = new System.Drawing.Point(12, 148);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(252, 27);
+            this.txtNombre.Size = new System.Drawing.Size(284, 32);
             this.txtNombre.TabIndex = 48;
             // 
             // label1
@@ -95,33 +96,35 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(23, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(17, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 50);
+            this.label1.Size = new System.Drawing.Size(423, 60);
             this.label1.TabIndex = 38;
-            this.label1.Text = "AGREGAR EVENTO EN";
+            this.label1.Text = "Agregar evento en ";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblNombre.Location = new System.Drawing.Point(425, 30);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombre.Location = new System.Drawing.Point(452, 18);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(410, 50);
+            this.lblNombre.Size = new System.Drawing.Size(413, 60);
             this.lblNombre.TabIndex = 52;
-            this.lblNombre.Text = "[NOMBRE DEL LOCAL]";
+            this.lblNombre.Text = "[Nombre del local]";
             // 
             // dgvSectores
             // 
+            this.dgvSectores.BackgroundColor = System.Drawing.Color.White;
             this.dgvSectores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSectores.Location = new System.Drawing.Point(312, 109);
+            this.dgvSectores.GridColor = System.Drawing.Color.White;
+            this.dgvSectores.Location = new System.Drawing.Point(348, 175);
             this.dgvSectores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSectores.Name = "dgvSectores";
             this.dgvSectores.RowHeadersWidth = 51;
-            this.dgvSectores.Size = new System.Drawing.Size(523, 246);
+            this.dgvSectores.Size = new System.Drawing.Size(588, 308);
             this.dgvSectores.TabIndex = 53;
             // 
             // btnAgregarSector
@@ -130,11 +133,12 @@
             this.btnAgregarSector.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarSector.FlatAppearance.BorderSize = 0;
             this.btnAgregarSector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarSector.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarSector.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarSector.Location = new System.Drawing.Point(37, 200);
-            this.btnAgregarSector.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnAgregarSector.Location = new System.Drawing.Point(73, 277);
+            this.btnAgregarSector.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnAgregarSector.Name = "btnAgregarSector";
-            this.btnAgregarSector.Size = new System.Drawing.Size(105, 42);
+            this.btnAgregarSector.Size = new System.Drawing.Size(194, 36);
             this.btnAgregarSector.TabIndex = 54;
             this.btnAgregarSector.Text = "AGREGAR SECTOR";
             this.btnAgregarSector.UseVisualStyleBackColor = false;
@@ -146,11 +150,12 @@
             this.btnEliminarSector.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarSector.FlatAppearance.BorderSize = 0;
             this.btnEliminarSector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarSector.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarSector.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarSector.Location = new System.Drawing.Point(37, 247);
-            this.btnEliminarSector.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnEliminarSector.Location = new System.Drawing.Point(73, 389);
+            this.btnEliminarSector.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnEliminarSector.Name = "btnEliminarSector";
-            this.btnEliminarSector.Size = new System.Drawing.Size(105, 42);
+            this.btnEliminarSector.Size = new System.Drawing.Size(194, 36);
             this.btnEliminarSector.TabIndex = 55;
             this.btnEliminarSector.Text = "ELIMINAR SECTOR";
             this.btnEliminarSector.UseVisualStyleBackColor = false;
@@ -163,20 +168,20 @@
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(178, 312);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(201, 449);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(111, 42);
+            this.btnRegistrar.Size = new System.Drawing.Size(125, 34);
             this.btnRegistrar.TabIndex = 57;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // dtpFechaHora
             // 
-            this.dtpFechaHora.Location = new System.Drawing.Point(37, 165);
+            this.dtpFechaHora.Location = new System.Drawing.Point(12, 218);
             this.dtpFechaHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaHora.Name = "dtpFechaHora";
-            this.dtpFechaHora.Size = new System.Drawing.Size(252, 22);
+            this.dtpFechaHora.Size = new System.Drawing.Size(283, 26);
             this.dtpFechaHora.TabIndex = 58;
             // 
             // btnModificarSector
@@ -185,11 +190,12 @@
             this.btnModificarSector.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificarSector.FlatAppearance.BorderSize = 0;
             this.btnModificarSector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarSector.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarSector.ForeColor = System.Drawing.Color.White;
-            this.btnModificarSector.Location = new System.Drawing.Point(165, 200);
-            this.btnModificarSector.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnModificarSector.Location = new System.Drawing.Point(73, 333);
+            this.btnModificarSector.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnModificarSector.Name = "btnModificarSector";
-            this.btnModificarSector.Size = new System.Drawing.Size(112, 42);
+            this.btnModificarSector.Size = new System.Drawing.Size(194, 36);
             this.btnModificarSector.TabIndex = 59;
             this.btnModificarSector.Text = "MODIFICAR SECTOR";
             this.btnModificarSector.UseVisualStyleBackColor = false;
@@ -200,18 +206,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label2.Location = new System.Drawing.Point(477, 66);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(523, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 50);
+            this.label2.Size = new System.Drawing.Size(199, 60);
             this.label2.TabIndex = 60;
-            this.label2.Text = "SECTORES";
+            this.label2.Text = "Sectores";
             // 
             // frmModificarSectoresEventos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 364);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(928, 494);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnModificarSector);
             this.Controls.Add(this.dtpFechaHora);

@@ -38,25 +38,27 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(392, 91);
+            this.txtNombre.Location = new System.Drawing.Point(441, 114);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 22);
+            this.txtNombre.Size = new System.Drawing.Size(112, 26);
             this.txtNombre.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(401, 72);
+            this.label1.Location = new System.Drawing.Point(451, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(417, 219);
+            this.btnRegistrar.Location = new System.Drawing.Point(469, 274);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(84, 29);
             this.btnRegistrar.TabIndex = 2;
             this.btnRegistrar.Text = "button1";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -65,40 +67,43 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(401, 122);
+            this.label2.Location = new System.Drawing.Point(451, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
             // 
             // lblVolver
             // 
             this.lblVolver.AutoSize = true;
-            this.lblVolver.Location = new System.Drawing.Point(285, 222);
+            this.lblVolver.Location = new System.Drawing.Point(321, 278);
             this.lblVolver.Name = "lblVolver";
-            this.lblVolver.Size = new System.Drawing.Size(44, 16);
+            this.lblVolver.Size = new System.Drawing.Size(51, 20);
             this.lblVolver.TabIndex = 5;
             this.lblVolver.Text = "label3";
             this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
             // 
             // dtEvento
             // 
-            this.dtEvento.Location = new System.Drawing.Point(358, 141);
+            this.dtEvento.Location = new System.Drawing.Point(403, 176);
+            this.dtEvento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtEvento.Name = "dtEvento";
-            this.dtEvento.Size = new System.Drawing.Size(200, 22);
+            this.dtEvento.Size = new System.Drawing.Size(224, 26);
             this.dtEvento.TabIndex = 6;
             // 
             // frmAgregarEventoo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 450);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(846, 562);
             this.Controls.Add(this.dtEvento);
             this.Controls.Add(this.lblVolver);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAgregarEventoo";
             this.Text = "frmAgregarEventoo";
             this.ResumeLayout(false);
