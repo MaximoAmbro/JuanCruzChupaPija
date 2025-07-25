@@ -21,7 +21,6 @@ namespace Visual
         private void lblyatengocuen_Click(object sender, EventArgs e)
         {
             frmMenuVendedor frm = new frmMenuVendedor();
-            frm.Mail = Mail;
             frm.Show(); this.Hide();
         }
     }

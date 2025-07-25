@@ -56,7 +56,7 @@
             btnVolver.TabIndex = 1;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
-            btnVolver.Click += btnVolver_Click_1;
+            btnVolver.Click += btnVolver_Click;
             // 
             // lblSectorA
             // 

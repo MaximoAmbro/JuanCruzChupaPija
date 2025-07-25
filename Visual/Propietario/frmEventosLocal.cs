@@ -1,5 +1,4 @@
-﻿using Repositorio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +27,6 @@ namespace Visual.Vendedor
         private void frmRegistrarEvento_Load(object sender, EventArgs e)
         {
             lblNombre.Text = NombreLocal;
-            dgvEventos.DataSource = GestorPropietario.Instance.ObtenerListaEventos(Mail, NombreLocal);
             dgvEventos.Refresh();
             DataGridViewColumn columnaNombre = new DataGridViewColumn();
             DataGridViewColumn columnaUbicacion = new DataGridViewColumn();
@@ -39,8 +37,6 @@ namespace Visual.Vendedor
         private void btnAgregarEvento_Click(object sender, EventArgs e)
         {
             frmAgregarEventoLocal frm = new frmAgregarEventoLocal();
-            frm.Mail = Mail;
-            frm.NombreLocal = NombreLocal;
             frm.Show(); this.Close();
         }
         private void btnEliminarEvento_Click(object sender, EventArgs e)
@@ -48,7 +44,7 @@ namespace Visual.Vendedor
             if (dgvEventos.SelectedCells.Count > 0)
             {
                 string NombreEvento = dgvEventos.SelectedCells[0].Value.ToString();
-                GestorPropietario.Instance.EliminarEvento(Mail, NombreLocal, NombreEvento);
+                // logica eliminar bdd 
                 frmEventosLocal frm = new frmEventosLocal();
                 frm .Mail = Mail;
                 frm.NombreLocal = NombreLocal;

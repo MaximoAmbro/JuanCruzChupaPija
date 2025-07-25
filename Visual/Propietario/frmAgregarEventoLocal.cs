@@ -1,5 +1,4 @@
-﻿using Repositorio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +12,7 @@ namespace Visual.Vendedor
 {
     public partial class frmAgregarEventoLocal : Form
     {
-        public string Mail { get; set; }
-        public string NombreLocal { get; set; }
+
         public string NombreEvento { get; set; }
         public frmAgregarEventoLocal()
         {
@@ -23,27 +21,25 @@ namespace Visual.Vendedor
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmEventosLocal form = new frmEventosLocal();
-            form.Mail = Mail;
-            form.NombreLocal = NombreLocal;
             form.Show(); this.Hide();
         }
         private void frmAgregarEventoLocal_Load(object sender, EventArgs e)
         {
-            lblNombre.Text = NombreLocal;
+            // falta logica bdd
             CargarDGV();
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            // falta logica bdd
             DateTime fechaHora = dtpFechaHora.Value;
             DateTime fecha = fechaHora.Date;
             TimeSpan hora = fechaHora.TimeOfDay;
             NombreEvento = txtNombre.Text;
-            GestorPropietario.Instance.AgregarEventoLocal(Mail, NombreLocal, txtNombre.Text, hora, fecha);
             CargarDGV();
         }
         public void CargarDGV()
         {
-            dgvSectores.DataSource = GestorPropietario.Instance.ObtenerListaSectores(Mail, NombreLocal, NombreEvento);
+            // Ver si Podemos hacer el dgv o usamos una listbox y chau
             dgvSectores.Refresh();
             DataGridViewColumn columnaNombre = new DataGridViewColumn();
             DataGridViewColumn columnaUbicacion = new DataGridViewColumn();

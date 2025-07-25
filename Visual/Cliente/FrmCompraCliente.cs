@@ -1,40 +1,41 @@
-﻿using Negocio;
+﻿
+using iText;
+using iText.IO.Font;
+using iText.IO.Font.Constants;
+using iText.IO.Image;
+using iText.Kernel;
+using iText.Kernel.Colors;
+using iText.Kernel.Font;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using iText.Pdfa.Checker;
+using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using Entidades;
-using iText;
-using iText.IO.Image;
-using iText.Kernel;
-using iText.Layout;
-using iText.Layout.Properties;
-using iText.Layout.Element;
-using QRCoder;
-using iText.Kernel.Pdf;
-using iText.Kernel.Geom;
-using iText.Layout.Element;
-using iText.Kernel.Colors;
-using iText.Kernel.Pdf.Canvas;
-using iText.IO.Font.Constants;
-using iText.Kernel.Font;
-using iText.IO.Font;
-using iText.Pdfa.Checker;
 
 namespace Visual
 {
     public partial class FrmCompraCliente : Form
     {
-        public string NombreEvento { get; set; }
-        public string NombreUsuario { get; set; }
-        public string Mail { get; set; }
-        GestorEventos gestorE = new GestorEventos();
+        public int IDUsuario;
+        public int IDEvento;
+        public string NombreEvento;
+        public SqlConnection ConexionSql;
+        public string NombreUsuario;
         public FrmCompraCliente()
         {
             frmEventosCliente frm = new frmEventosCliente();
@@ -43,27 +44,14 @@ namespace Visual
         }
         private void FrmCompra_Load(object sender, EventArgs e)
         {
-            label1.Text = NombreEvento;
-            string SectorA, SectorB, SectorC, PrecioA, PrecioB, PrecioC;
-            GestorEventos gestor = new GestorEventos();
-            gestor.BuscarLista(NombreEvento);
-            SectorA = gestor.SectorA.ToString();
-            SectorB = gestor.SectorB.ToString();
-            SectorC = gestor.SectorC.ToString();
-            PrecioA = gestor.PrecioA.ToString();
-            PrecioB = gestor.PrecioB.ToString();
-            PrecioC = gestor.PrecioC.ToString();
-            lblSectorA.Text = SectorA;
-            lblSectorB.Text = SectorB;
-            lblSectorC.Text = SectorC;
-            lblPrecioA.Text = PrecioA + "$";
-            lblPrecioB.Text = PrecioB + "$";
-            lblPrecioC.Text = PrecioC + "$";
-        }
-        private void btnVolver_Click_1(object sender, EventArgs e)
+            CargarSectores();
+        } // Una vez iniciado se cargan los sectores en CargarSectores
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             frmEventosCliente frm = new frmEventosCliente();
-            frm.Mail = Mail;
+            frm.IDUsuario = IDUsuario;
+            frm.ConexionSql = ConexionSql;
+            frm.NombreUsuario = NombreUsuario;
             frm.Show();
             this.Hide();
         }
@@ -73,13 +61,13 @@ namespace Visual
             int CantidadB = Convert.ToInt32(NumSegundo.Text);
             int CantidadC = Convert.ToInt32(NumTercero.Text);
             int CantidadTotal = cantidadA + CantidadB + CantidadC;
-            CargarEntrada();
             GenerarTicket();
-            MessageBox.Show("Compra realizada con exito,"+ "revise documentos para recibir su entrada");
+            MessageBox.Show("Compra realizada con exito," + "revise documentos para recibir su entrada");
         }
+
+
         public void GenerarTicket()
         {
-            GestorEventos gestor = new GestorEventos();
             int cantidadA = Convert.ToInt32(NumPrimero.Text);
             int CantidadB = Convert.ToInt32(NumSegundo.Text);
             int CantidadC = Convert.ToInt32(NumTercero.Text);
@@ -89,45 +77,38 @@ namespace Visual
             if (!Directory.Exists(carpetaTickets))
             {
                 Directory.CreateDirectory(carpetaTickets);
-            }
+            } 
 
             for (int i = 0; i <= CantidadTotal; i++)
             {
-                if (cantidadA > 0)
+                // Nombre del evento, el Sector y la cantidad de entradas compradas
+                string consulta = "SELECT Nombre FROM Eventos WHERE ID_Evento = @ID_Evento";
+
+                using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
                 {
-                    gestor.GenerarTicket(NombreEvento, lblSectorA.Text);
-                    string Ruta = System.IO.Path.Combine(carpetaTickets, $"Ticket_{NombreEvento}_{lblSectorA.Text}_{CantidadTickets}.PDF" );
+                    sqlcomando.Parameters.Clear();
+                    sqlcomando.Parameters.AddWithValue("@ID_Evento", IDEvento);
+                    ConexionSql.Open();
+                    object result = sqlcomando.ExecuteScalar();
+                    NombreEvento = result.ToString();
+                    ConexionSql.Close();
+                }
+
+                string Ruta = System.IO.Path.Combine(carpetaTickets, $"Ticket_{NombreEvento}_{lblSectorA.Text}_{CantidadTickets}.PDF" );
                     CantidadTickets++;
-                    GenerarPDF(Ruta, gestor.MensajeTicket, gestor.QRCodeImage);
+                    //GenerarPDF(Ruta, //MensajeTicket, //QRCodeImage);
                     cantidadA--;
                     CantidadTotal--;
-                }
-                if (CantidadB > 0)
-                {
-                    gestor.GenerarTicket(NombreEvento, lblSectorB.Text);
-                    string Ruta = System.IO.Path.Combine(carpetaTickets, $"Ticket_{NombreEvento}_{lblSectorB.Text}_{CantidadTickets}.PDF");
-                    CantidadTickets++;
-                    GenerarPDF(Ruta, gestor.MensajeTicket, gestor.QRCodeImage);
-                    CantidadB--;
-                    CantidadTotal--;
-                }
-                if (CantidadC>0)
-                {
-                    gestor.GenerarTicket(NombreEvento, lblSectorC.Text);
-                    string Ruta =  System.IO.Path.Combine(carpetaTickets, $"Ticket_{NombreEvento}_{lblSectorC.Text}_{CantidadTickets}.PDF");
-                    CantidadTickets++;
-                    GenerarPDF(Ruta, gestor.MensajeTicket, gestor.QRCodeImage);
-                    CantidadC--;
-                    CantidadTotal--;
-                }
+                // tendriamos que llevar esta logica a la bdd
             }
+
         }
-        public void GenerarPDF(string ruta, string mensaje, byte[] QR )
+        public void GenerarPDF(string ruta, string mensaje, byte[] QR)
         {
-           PdfWriter pw = new PdfWriter(ruta);
-           PdfDocument pdf = new PdfDocument(pw);
+            PdfWriter pw = new PdfWriter(ruta);
+            PdfDocument pdf = new PdfDocument(pw);
             // aca elegimos el tamaño de la pagina
-           Document doc = new Document(pdf, PageSize.A6.Rotate());
+            Document doc = new Document(pdf, PageSize.A6.Rotate());
             // aca seteamos el color de la pagina
             PdfPage page = pdf.AddNewPage();
             PdfCanvas canvas = new PdfCanvas(page);
@@ -151,18 +132,81 @@ namespace Visual
 
             doc.Close();
         }
-        public void CargarEntrada()
+        private void CargarSectores()
         {
-            List<Evento> listaEventos = gestorE.ObtenerListaEventos();
+            string consulta = "SELECT Nombre FROM Sectores WHERE EventoID = @ID_Evento AND PrecioID = @PrecioID";
 
-            foreach (Evento _evento in listaEventos)
+            ConexionSql.Open();
+
+            for (int i = 1; i <= 3; i++)
             {
-                if (_evento.Nombre == NombreEvento)
+                using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
                 {
-                    GestorClientes.Instance.AgregarEntrada(_evento, Mail);
-                    break;
+                    sqlcomando.Parameters.Clear();
+                    sqlcomando.Parameters.AddWithValue("@ID_EventO", IDEvento);
+                    sqlcomando.Parameters.AddWithValue("@PrecioID", i);
+
+                    object result = sqlcomando.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        string nombre = result.ToString();
+                        string etiqueta = $"Sector {i}: {nombre}";
+
+                        if (i == 1)
+                            lblSectorA.Text = etiqueta;
+                        else if (i == 2)
+                            lblSectorB.Text = etiqueta;
+                        else if (i == 3)
+                            lblSectorC.Text = etiqueta;
+                    }
+                    else
+                    {
+                        if (i == 1) lblSectorA.Text = "";
+                        else if (i == 2) lblSectorB.Text = "";
+                        else if (i == 3) lblSectorC.Text = "";
+                    }
                 }
             }
-        }
+            ConexionSql.Close();
+
+            string consulta2 = "SELECT Precio FROM Sectores WHERE EventoID = @ID_Evento AND PrecioID = @PrecioID";
+
+            ConexionSql.Open();
+
+            for (int i = 1; i <= 3; i++)
+            {
+                using (SqlCommand sqlcomando = new SqlCommand(consulta2, ConexionSql))
+                {
+                    sqlcomando.Parameters.Clear();
+                    sqlcomando.Parameters.AddWithValue("@ID_EventO", IDEvento);
+                    sqlcomando.Parameters.AddWithValue("@PrecioID", i);
+
+                    object result = sqlcomando.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        string precio = result.ToString();
+                        string etiqueta = precio + " $";
+
+                        if (i == 1)
+                            lblPrecioA.Text = etiqueta;
+                        else if (i == 2)
+                            lblPrecioB.Text = etiqueta;
+                        else if (i == 3)
+                            lblPrecioC.Text = etiqueta;
+                    }
+                    else
+                    {
+                        if (i == 1) lblPrecioA.Text = "";
+                        else if (i == 2) lblPrecioB.Text = "";
+                        else if (i == 3) lblPrecioC.Text = "";
+                    }
+                }
+            }
+
+            ConexionSql.Close();
+        } // Aca se llaman a los sectores de la base de datos y se cargan en los labels correspondientes
     }
 }
+
