@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,8 @@ namespace Visual
 {
     public partial class frmRegistrarLocal : Form
     {
-        public string Mail { get; set; }
+        public int IDUsuario;
+        public SqlConnection ConexionSql;
         public frmRegistrarLocal()
         {
             InitializeComponent();
@@ -20,7 +22,29 @@ namespace Visual
 
         private void lblyatengocuen_Click(object sender, EventArgs e)
         {
+            Cerrar();
+        }
+        private void btnregistrarse_Click(object sender, EventArgs e)
+        {
+            string consulta = "INSERT INTO Locales (Nombre, Direccion, Capacidad, PropietarioID) " +
+                "VALUES (@Nombre, @Direccion, @Capacidad, @PropietarioID)";
+            SqlCommand sqlComando = new SqlCommand(consulta, ConexionSql);
+            ConexionSql.Open();
+            sqlComando.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+            sqlComando.Parameters.AddWithValue("@Direccion", txtDireccion.Text + " " + txtAltura.Text);
+            sqlComando.Parameters.AddWithValue("@Capacidad", txtCapacidad.Text);
+            sqlComando.Parameters.AddWithValue("@PropietarioID", IDUsuario);
+
+            sqlComando.ExecuteNonQuery();
+            ConexionSql.Close();
+            MessageBox.Show("Local registrado creado correctamente");
+            Cerrar();
+        }
+        private void Cerrar()
+        {
             frmMenuVendedor frm = new frmMenuVendedor();
+            frm.ConexionSql = ConexionSql;
+            frm.IDUsuario = IDUsuario;
             frm.Show(); this.Hide();
         }
     }

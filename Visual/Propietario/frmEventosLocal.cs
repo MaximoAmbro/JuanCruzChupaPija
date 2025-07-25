@@ -21,7 +21,7 @@ namespace Visual.Vendedor
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmMisLocales frm = new frmMisLocales();
-            frm.Mail = Mail;
+
             frm.Show(); this.Hide();
         }
         private void frmRegistrarEvento_Load(object sender, EventArgs e)

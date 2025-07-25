@@ -26,16 +26,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Repositorio;
+using Negocio;
+using Entidades;
 
 namespace Visual
 {
     public partial class FrmCompraCliente : Form
     {
+        public string NombreEvento;
         public int IDUsuario;
         public int IDEvento;
-        public string NombreEvento;
         public SqlConnection ConexionSql;
         public string NombreUsuario;
+        GestorEventos GestorEventos = new GestorEventos();
         public FrmCompraCliente()
         {
             frmEventosCliente frm = new frmEventosCliente();
@@ -64,10 +68,9 @@ namespace Visual
             GenerarTicket();
             MessageBox.Show("Compra realizada con exito," + "revise documentos para recibir su entrada");
         }
-
-
         public void GenerarTicket()
         {
+
             int cantidadA = Convert.ToInt32(NumPrimero.Text);
             int CantidadB = Convert.ToInt32(NumSegundo.Text);
             int CantidadC = Convert.ToInt32(NumTercero.Text);
@@ -81,9 +84,8 @@ namespace Visual
 
             for (int i = 0; i <= CantidadTotal; i++)
             {
-                // Nombre del evento, el Sector y la cantidad de entradas compradas
-                string consulta = "SELECT Nombre FROM Eventos WHERE ID_Evento = @ID_Evento";
-
+                string SectorNombre = ""; string PrecioSector = ""; string FechaEvento = "";
+                string consulta = "SELECT Nombre FROM Eventos WHERE ID = @ID_Evento";
                 using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
                 {
                     sqlcomando.Parameters.Clear();
@@ -93,17 +95,42 @@ namespace Visual
                     NombreEvento = result.ToString();
                     ConexionSql.Close();
                 }
+                if (cantidadA > 0)
+                {
+                    SectorNombre = lblSectorA.Text;
+                    PrecioSector = lblPrecioA.Text;
+                }
+                else if (CantidadB > 0)
+                {
+                    SectorNombre = lblSectorB.Text;
+                    PrecioSector = lblPrecioB.Text;
+                }
+                else if (CantidadC > 0)
+                {
+                    SectorNombre = lblSectorC.Text;
+                    PrecioSector = lblPrecioC.Text;
+                }
 
+                string consulta2 = "SELECT Fecha FROM Eventos WHERE ID = @ID_Evento";
+                using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
+                {
+                    sqlcomando.Parameters.Clear();
+                    sqlcomando.Parameters.AddWithValue("@ID_Evento", IDEvento);
+                    ConexionSql.Open();
+                    object result = sqlcomando.ExecuteScalar();
+                    FechaEvento = result.ToString();
+                    ConexionSql.Close();
+                }
                 string Ruta = System.IO.Path.Combine(carpetaTickets, $"Ticket_{NombreEvento}_{lblSectorA.Text}_{CantidadTickets}.PDF" );
                     CantidadTickets++;
-                    //GenerarPDF(Ruta, //MensajeTicket, //QRCodeImage);
+                    GestorEventos.GenerarTicket(NombreEvento, SectorNombre, PrecioSector, FechaEvento);
+                    GenerarPDF(Ruta, GestorEventos.MensajeTicket, GestorEventos.QRCodeImage);
                     cantidadA--;
                     CantidadTotal--;
-                // tendriamos que llevar esta logica a la bdd
             }
 
         }
-        public void GenerarPDF(string ruta, string mensaje, byte[] QR)
+        public void GenerarPDF( string ruta, string mensaje, byte[] QR)
         {
             PdfWriter pw = new PdfWriter(ruta);
             PdfDocument pdf = new PdfDocument(pw);
@@ -151,7 +178,7 @@ namespace Visual
                     if (result != null && result != DBNull.Value)
                     {
                         string nombre = result.ToString();
-                        string etiqueta = $"Sector {i}: {nombre}";
+                        string etiqueta = nombre;
 
                         if (i == 1)
                             lblSectorA.Text = etiqueta;
