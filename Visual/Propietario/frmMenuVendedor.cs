@@ -25,9 +25,17 @@ namespace Visual
 
         private void btnMisLocales_Click(object sender, EventArgs e)
         {
+            frmMisLocales frm = new frmMisLocales();
+            frm.ConexionSql = ConexionSql;
+            frm.IDUsuario = IDUsuario;
+            frm.Show(); this.Hide();
         }
         private void btnRegistrarLocal_Click(object sender, EventArgs e)
         {
+            frmRegistrarLocal frm = new frmRegistrarLocal();
+            frm.ConexionSql = ConexionSql;
+            frm.IDUsuario = IDUsuario;
+            frm.Show(); this.Hide();
         }
         private void frmMenuVendedor_Load(object sender, EventArgs e)
         {
@@ -39,5 +47,6 @@ namespace Visual
             frmInicio.ConexionSql = ConexionSql;
             frmInicio.Show(); this.Hide();
         }
+
     }
 }
