@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entidades; using Negocio;
 namespace Visual
 {
     public partial class frmEventosCliente : Form
     {
-        private GestorEventos gestorEventos;
-        public string Mail { get; set; }
-
+        public int IDUsuario;
+        public SqlConnection ConexionSql;
+        public string NombreUsuario;
         public frmEventosCliente()
         {
             InitializeComponent();
@@ -22,28 +22,53 @@ namespace Visual
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmMenuCliente frm = new frmMenuCliente();
-            frm.Mail = Mail;
+            frm.IDUsuario = IDUsuario;
+            frm.ConexionSql = ConexionSql;
+            frm.NombreUsuario = NombreUsuario;
             frm.Show();
             this.Hide();
         }
-        private void frmEventos_Load(object sender, EventArgs e)
+        private void frmEventosCliente_Load(object sender, EventArgs e)
         {
-            gestorEventos = new GestorEventos();
-            dgveventos.DataSource = gestorEventos.ObtenerListaEventos();
-            DataGridViewColumn columnaNombre = new DataGridViewColumn();
-            DataGridViewColumn columnaUbicacion = new DataGridViewColumn();
-            dgveventos.AutoGenerateColumns = true;
-            dgveventos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                  string consulta = @"
+            SELECT 
+                E.Nombre AS Nombre,
+                E.Fecha,
+                L.Direccion AS Ubicacion,
+                L.Nombre AS Complejo
+            FROM Eventos E
+            JOIN Locales L ON E.LocalID = L.ID
+                    ";
+            ;
+            using (SqlCommand cmd = new SqlCommand(consulta, ConexionSql))
+            {
+                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
 
-        }
-        private void btnComprar_Click_1(object sender, EventArgs e)
+                dgveventos.DataSource = tabla;
+            }
+        } 
+        private void btnComprar_Click(object sender, EventArgs e)
         {
+            int IDEvento = 0;
             if (dgveventos.SelectedCells.Count > 0)
             {
-                string nombre = dgveventos.SelectedCells[0].Value.ToString();
+                string consulta = "SELECT ID FROM Eventos WHERE Fecha = @Fecha AND Nombre = @Nombre";
+                using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
+                {
+                    sqlcomando.Parameters.AddWithValue("@Fecha", dgveventos.SelectedCells[0].OwningRow.Cells["Fecha"].Value);
+                    sqlcomando.Parameters.AddWithValue("@Nombre", dgveventos.SelectedCells[0].OwningRow.Cells["Nombre"].Value);
+                    ConexionSql.Open();
+                    object id= sqlcomando.ExecuteScalar();
+                    IDEvento = Convert.ToInt32(id);
+                    ConexionSql.Close();
+                }
+                // una vez creado el NombreEvento, se abre el formulario de compra
                 FrmCompraCliente frm = new FrmCompraCliente();
-                frm.NombreEvento = nombre;
-                frm.Mail = Mail;
+                frm.IDUsuario = IDUsuario;
+                frm.IDEvento = IDEvento;
+                frm.ConexionSql = ConexionSql;
                 frm.Show();
                 this.Hide();
             }
@@ -51,6 +76,6 @@ namespace Visual
             {
                 MessageBox.Show("Debe seleccionar un evento para comprar", "Hola Pedro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }    
+        }
     }
 }

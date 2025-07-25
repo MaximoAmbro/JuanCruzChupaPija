@@ -13,10 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-/*using Entidades; 
-using Negocio;
-using Repositorio;
-*/
+
 namespace Visual
 {
     public partial class frmInicio : Form
@@ -29,8 +26,6 @@ namespace Visual
             string miConexion =
             ConfigurationManager.ConnectionStrings["Visual.Properties.Settings.BddEventAura"].ConnectionString;
             ConexionSql = new SqlConnection(miConexion);
-            /*  GestorClientes.Instance.CargarLista();
-            GestorPropietario.Instance.CargarLista(); */
         }
         private void frmInicio_Load(object sender, EventArgs e)
         {
@@ -90,7 +85,21 @@ namespace Visual
         {
             string consulta = "SELECT TipoUsuario FROM Usuario WHERE Mail = @Mail AND Contraseña = @Contraseña";
             string consulta2 = "SELECT Nombre FROM Usuario WHERE Mail = @Mail AND Contraseña = @Contraseña";
+            string consulta3 = "SELECT ID FROM Usuario WHERE Mail = @Mail AND Contraseña = @Contraseña";
             string NombreUsuario = string.Empty;
+            int ID = 0;
+            using (SqlCommand sqlcomando3 = new SqlCommand(consulta3, ConexionSql))
+            {
+                sqlcomando3.Parameters.AddWithValue("@Mail", txtMailLogin.Text);
+                sqlcomando3.Parameters.AddWithValue("@Contraseña", txtContraseñaLogin.Text);
+                ConexionSql.Open();
+                object IDUsuario = sqlcomando3.ExecuteScalar();
+                ConexionSql.Close();
+                if (IDUsuario != null)
+                {
+                    ID = Convert.ToInt32(IDUsuario);
+                }
+            } // busca y devuelve el ID del usuario
             using (SqlCommand sqlcomando2 = new SqlCommand(consulta2, ConexionSql)) 
             {
                 sqlcomando2.Parameters.AddWithValue("@Mail", txtMailLogin.Text);
@@ -120,6 +129,7 @@ namespace Visual
                     {
                         frmMenuCliente frm = new frmMenuCliente();
                         frm.NombreUsuario = NombreUsuario;
+                        frm.IDUsuario = ID;
                         frm.ConexionSql = ConexionSql;
                         frm.Show();
                         this.Hide();
@@ -127,6 +137,8 @@ namespace Visual
                     else if (tipoUsuario == "Propietario")
                     {
                         frmMenuVendedor frm = new frmMenuVendedor();
+                        frm.IDUsuario = ID;
+
                         frm.NombreUsuario = NombreUsuario;
                         frm.ConexionSql = ConexionSql;
                         frm.Show();

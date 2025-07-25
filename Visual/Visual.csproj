@@ -302,6 +302,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Entidade\Entidades.csproj">
+      <Project>{150ddfb7-d4ec-42fd-bbee-e4f96a2f7489}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repo\Repositorio.csproj">
+      <Project>{a31954ca-7a5c-4417-a4b1-d6644a5017cb}</Project>
+      <Name>Repositorio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

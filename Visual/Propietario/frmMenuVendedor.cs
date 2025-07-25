@@ -14,6 +14,7 @@ namespace Visual
 {
     public partial class frmMenuVendedor : Form
     {
+        public int IDUsuario;
         public SqlConnection ConexionSql;
         public string NombreUsuario;
 

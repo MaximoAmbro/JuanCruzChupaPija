@@ -1,6 +1,4 @@
-﻿using Entidades;
-using Negocio;
-using Repositorio;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +15,6 @@ namespace Visual
     public partial class frmMisLocales : Form
     {
         public string Mail { get; set; }
-        public List<Local> ListaLocales { get; set; }
         public frmMisLocales()
         {
             InitializeComponent();
@@ -41,12 +38,10 @@ namespace Visual
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmMenuVendedor frm = new frmMenuVendedor();
-            frm.Mail = Mail;
             frm.Show(); this.Hide();
         }
         private void frmMisLocales_Load(object sender, EventArgs e)
         {
-            dgvLocales.DataSource = GestorPropietario.Instance.ObtenerListaLocales(Mail);
             dgvLocales.Refresh();
             DataGridViewColumn columnaNombre = new DataGridViewColumn();
             DataGridViewColumn columnaUbicacion = new DataGridViewColumn();
