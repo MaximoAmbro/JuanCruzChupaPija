@@ -157,9 +157,9 @@
             this.label5.Location = new System.Drawing.Point(35, 112);
             this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(32, 16);
             this.label5.TabIndex = 41;
-            this.label5.Text = "Nombre";
+            this.label5.Text = "Mail";
             // 
             // frmCambiarContraseña
             // 

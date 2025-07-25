@@ -1,6 +1,6 @@
 ﻿namespace Visual
 {
-    partial class frmCrearUsuario
+    partial class frmAgregarEvento
     {
         /// <summary>
         /// Required designer variable.

@@ -90,6 +90,7 @@
             this.btnEventosLocal.TabIndex = 41;
             this.btnEventosLocal.Text = "Ver eventos";
             this.btnEventosLocal.UseVisualStyleBackColor = false;
+            this.btnEventosLocal.Click += new System.EventHandler(this.btnEventosLocal_Click);
             // 
             // frmMisLocales
             // 

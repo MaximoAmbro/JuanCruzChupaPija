@@ -28,134 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnEliminarEvento = new System.Windows.Forms.Button();
-            dgvEventos = new System.Windows.Forms.DataGridView();
-            label2 = new System.Windows.Forms.Label();
-            btnVolver = new System.Windows.Forms.Button();
-            lblNombre = new System.Windows.Forms.Label();
-            btnAgregarEvento = new System.Windows.Forms.Button();
-            btnModificarEvento = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)dgvEventos).BeginInit();
-            SuspendLayout();
+            this.btnEliminarEvento = new System.Windows.Forms.Button();
+            this.dgvEventos = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnModificarEvento = new System.Windows.Forms.Button();
+            this.btnAgregarEvento = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).BeginInit();
+            this.SuspendLayout();
             // 
             // btnEliminarEvento
             // 
-            btnEliminarEvento.BackColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            btnEliminarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnEliminarEvento.FlatAppearance.BorderSize = 0;
-            btnEliminarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnEliminarEvento.ForeColor = System.Drawing.Color.White;
-            btnEliminarEvento.Location = new System.Drawing.Point(50, 354);
-            btnEliminarEvento.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            btnEliminarEvento.Name = "btnEliminarEvento";
-            btnEliminarEvento.Size = new System.Drawing.Size(215, 42);
-            btnEliminarEvento.TabIndex = 45;
-            btnEliminarEvento.Text = "Eliminar evento";
-            btnEliminarEvento.UseVisualStyleBackColor = false;
-            btnEliminarEvento.Click += btnEliminarEvento_Click;
+            this.btnEliminarEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnEliminarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarEvento.FlatAppearance.BorderSize = 0;
+            this.btnEliminarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarEvento.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarEvento.Location = new System.Drawing.Point(50, 283);
+            this.btnEliminarEvento.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnEliminarEvento.Name = "btnEliminarEvento";
+            this.btnEliminarEvento.Size = new System.Drawing.Size(215, 34);
+            this.btnEliminarEvento.TabIndex = 45;
+            this.btnEliminarEvento.Text = "Eliminar evento";
+            this.btnEliminarEvento.UseVisualStyleBackColor = false;
+            this.btnEliminarEvento.Click += new System.EventHandler(this.btnEliminarEvento_Click);
             // 
             // dgvEventos
             // 
-            dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvEventos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dgvEventos.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            dgvEventos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEventos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dgvEventos.Location = new System.Drawing.Point(12, 115);
-            dgvEventos.Name = "dgvEventos";
-            dgvEventos.RowHeadersWidth = 51;
-            dgvEventos.Size = new System.Drawing.Size(876, 233);
-            dgvEventos.TabIndex = 44;
+            this.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEventos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvEventos.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvEventos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEventos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvEventos.Location = new System.Drawing.Point(12, 92);
+            this.dgvEventos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvEventos.Name = "dgvEventos";
+            this.dgvEventos.RowHeadersWidth = 51;
+            this.dgvEventos.Size = new System.Drawing.Size(876, 186);
+            this.dgvEventos.TabIndex = 44;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Nirmala UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.ForeColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            label2.Location = new System.Drawing.Point(32, 9);
-            label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(233, 62);
-            label2.TabIndex = 43;
-            label2.Text = "EVENTOS";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label2.Location = new System.Drawing.Point(32, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(233, 62);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "EVENTOS";
             // 
             // btnVolver
             // 
-            btnVolver.BackColor = System.Drawing.Color.White;
-            btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnVolver.ForeColor = System.Drawing.Color.FromArgb(164, 165, 169);
-            btnVolver.Location = new System.Drawing.Point(394, 401);
-            btnVolver.Margin = new System.Windows.Forms.Padding(2);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new System.Drawing.Size(121, 33);
-            btnVolver.TabIndex = 42;
-            btnVolver.Text = "Volver";
-            btnVolver.UseVisualStyleBackColor = false;
-            btnVolver.Click += btnVolver_Click;
+            this.btnVolver.BackColor = System.Drawing.Color.White;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.btnVolver.Location = new System.Drawing.Point(394, 321);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(121, 26);
+            this.btnVolver.TabIndex = 42;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lblNombre
             // 
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new System.Drawing.Font("Nirmala UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lblNombre.ForeColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            lblNombre.Location = new System.Drawing.Point(294, 9);
-            lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new System.Drawing.Size(358, 62);
-            lblNombre.TabIndex = 46;
-            lblNombre.Text = "(Nombre local)";
-            // 
-            // btnAgregarEvento
-            // 
-            btnAgregarEvento.BackColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            btnAgregarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnAgregarEvento.FlatAppearance.BorderSize = 0;
-            btnAgregarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnAgregarEvento.ForeColor = System.Drawing.Color.White;
-            btnAgregarEvento.Location = new System.Drawing.Point(348, 354);
-            btnAgregarEvento.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            btnAgregarEvento.Name = "btnAgregarEvento";
-            btnAgregarEvento.Size = new System.Drawing.Size(215, 42);
-            btnAgregarEvento.TabIndex = 47;
-            btnAgregarEvento.Text = "Agregar evento";
-            btnAgregarEvento.UseVisualStyleBackColor = false;
-            btnAgregarEvento.Click += btnAgregarEvento_Click;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.lblNombre.Location = new System.Drawing.Point(294, 7);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(358, 62);
+            this.lblNombre.TabIndex = 46;
+            this.lblNombre.Text = "(Nombre local)";
             // 
             // btnModificarEvento
             // 
-            btnModificarEvento.BackColor = System.Drawing.Color.FromArgb(116, 86, 174);
-            btnModificarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnModificarEvento.FlatAppearance.BorderSize = 0;
-            btnModificarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnModificarEvento.ForeColor = System.Drawing.Color.White;
-            btnModificarEvento.Location = new System.Drawing.Point(622, 354);
-            btnModificarEvento.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            btnModificarEvento.Name = "btnModificarEvento";
-            btnModificarEvento.Size = new System.Drawing.Size(215, 42);
-            btnModificarEvento.TabIndex = 48;
-            btnModificarEvento.Text = "Modificar evento";
-            btnModificarEvento.UseVisualStyleBackColor = false;
+            this.btnModificarEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnModificarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarEvento.FlatAppearance.BorderSize = 0;
+            this.btnModificarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarEvento.ForeColor = System.Drawing.Color.White;
+            this.btnModificarEvento.Location = new System.Drawing.Point(348, 283);
+            this.btnModificarEvento.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnModificarEvento.Name = "btnModificarEvento";
+            this.btnModificarEvento.Size = new System.Drawing.Size(215, 34);
+            this.btnModificarEvento.TabIndex = 47;
+            this.btnModificarEvento.Text = "Administrar Evento";
+            this.btnModificarEvento.UseVisualStyleBackColor = false;
+            this.btnModificarEvento.Click += new System.EventHandler(this.btnAgregarEvento_Click);
+            // 
+            // btnAgregarEvento
+            // 
+            this.btnAgregarEvento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnAgregarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarEvento.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEvento.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarEvento.Location = new System.Drawing.Point(622, 283);
+            this.btnAgregarEvento.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnAgregarEvento.Name = "btnAgregarEvento";
+            this.btnAgregarEvento.Size = new System.Drawing.Size(215, 34);
+            this.btnAgregarEvento.TabIndex = 48;
+            this.btnAgregarEvento.Text = "Agregar Evento";
+            this.btnAgregarEvento.UseVisualStyleBackColor = false;
+            this.btnAgregarEvento.Click += new System.EventHandler(this.btnModificarEvento_Click);
             // 
             // frmEventosLocal
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(893, 438);
-            Controls.Add(btnModificarEvento);
-            Controls.Add(btnAgregarEvento);
-            Controls.Add(lblNombre);
-            Controls.Add(btnEliminarEvento);
-            Controls.Add(dgvEventos);
-            Controls.Add(label2);
-            Controls.Add(btnVolver);
-            Name = "frmEventosLocal";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "frmRegistrarEvento";
-            Load += frmRegistrarEvento_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvEventos).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(893, 350);
+            this.Controls.Add(this.btnAgregarEvento);
+            this.Controls.Add(this.btnModificarEvento);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.btnEliminarEvento);
+            this.Controls.Add(this.dgvEventos);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnVolver);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "frmEventosLocal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmRegistrarEvento";
+            this.Load += new System.EventHandler(this.frmEventosLocal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -165,7 +169,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Button btnAgregarEvento;
         private System.Windows.Forms.Button btnModificarEvento;
+        private System.Windows.Forms.Button btnAgregarEvento;
     }
 }

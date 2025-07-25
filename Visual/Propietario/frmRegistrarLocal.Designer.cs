@@ -88,6 +88,7 @@
             this.lblyatengocuen.Size = new System.Drawing.Size(53, 20);
             this.lblyatengocuen.TabIndex = 46;
             this.lblyatengocuen.Text = "Volver";
+            this.lblyatengocuen.Click += new System.EventHandler(this.lblyatengocuen_Click);
             // 
             // txtAltura
             // 

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Repositorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,11 @@ using System.Windows.Forms;
 
 namespace Visual
 {
-    public partial class frmCrearUsuario : Form
+    public partial class frmAgregarEvento : Form
     {
         public SqlConnection ConexionSql;
-        public frmCrearUsuario()
+        public GestorUsuarios gestorusuarios;
+        public frmAgregarEvento()
         {
             InitializeComponent();
         }
@@ -50,7 +52,8 @@ namespace Visual
         {
             if (RevisarTextbox()== true)
             {
-                ValidarLista();
+                gestorusuarios.AgregarUsuario(txtNombre.Text, txtApellido.Text, txtmail.Text, TxtPassword.Text, cbTipoUsuario.Text);
+                Cerrar();
             }
             else { return; }
         }
@@ -93,22 +96,6 @@ namespace Visual
                 return true;
             }
         } // Revisa si los textbox estan vacios
-        public void ValidarLista()
-        {
-            string consulta = "INSERT INTO Usuario (Nombre, Apellido, Mail, Contraseña, TipoUsuario) " +
-                "VALUES (@Nombre, @Apellido, @Mail, @Contraseña, @TipoUsuario)";
-            SqlCommand sqlComando = new SqlCommand(consulta, ConexionSql);
-            ConexionSql.Open();
-            sqlComando.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            sqlComando.Parameters.AddWithValue("@Apellido", txtApellido.Text);
-            sqlComando.Parameters.AddWithValue("@Mail", txtmail.Text);
-            sqlComando.Parameters.AddWithValue("@Contraseña", TxtPassword.Text);
-            sqlComando.Parameters.AddWithValue("@TipoUsuario", cbTipoUsuario.Text);
-            sqlComando.ExecuteNonQuery();
-            ConexionSql.Close();
-            MessageBox.Show("Usuario creado correctamente");
-            Cerrar();
-        } // Funcionamiento del formulario (agrega todo a la database)
         private void Cerrar()
         {
             frmInicio frm = new frmInicio();
