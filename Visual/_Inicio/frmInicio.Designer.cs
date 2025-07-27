@@ -45,7 +45,7 @@
             this.txtMailLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtMailLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMailLogin.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMailLogin.Location = new System.Drawing.Point(108, 259);
+            this.txtMailLogin.Location = new System.Drawing.Point(108, 249);
             this.txtMailLogin.Name = "txtMailLogin";
             this.txtMailLogin.Size = new System.Drawing.Size(250, 32);
             this.txtMailLogin.TabIndex = 5;
@@ -56,7 +56,7 @@
             this.txtContraseñaLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtContraseñaLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseñaLogin.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaLogin.Location = new System.Drawing.Point(108, 346);
+            this.txtContraseñaLogin.Location = new System.Drawing.Point(108, 336);
             this.txtContraseñaLogin.Name = "txtContraseñaLogin";
             this.txtContraseñaLogin.Size = new System.Drawing.Size(250, 32);
             this.txtContraseñaLogin.TabIndex = 7;
@@ -64,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(103, 315);
+            this.label3.Location = new System.Drawing.Point(103, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 28);
             this.label3.TabIndex = 6;
@@ -99,7 +99,7 @@
             this.lblcrearcuenta.AutoSize = true;
             this.lblcrearcuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblcrearcuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblcrearcuenta.Location = new System.Drawing.Point(162, 650);
+            this.lblcrearcuenta.Location = new System.Drawing.Point(157, 656);
             this.lblcrearcuenta.Name = "lblcrearcuenta";
             this.lblcrearcuenta.Size = new System.Drawing.Size(134, 28);
             this.lblcrearcuenta.TabIndex = 19;
@@ -124,7 +124,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(103, 228);
+            this.label5.Location = new System.Drawing.Point(103, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 28);
             this.label5.TabIndex = 21;
@@ -156,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(468, 714);
+            this.ClientSize = new System.Drawing.Size(473, 714);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);

@@ -35,5 +35,15 @@ namespace Visual.Propietario
             frm.IDUsuario = IDUsuario;
             frm.Show(); this.Hide();
         }
+
+        private void frmAgregarEventoo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
