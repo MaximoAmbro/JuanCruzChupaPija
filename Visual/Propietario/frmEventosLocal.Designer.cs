@@ -44,11 +44,12 @@
             this.btnEliminarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarEvento.FlatAppearance.BorderSize = 0;
             this.btnEliminarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarEvento.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarEvento.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarEvento.Location = new System.Drawing.Point(50, 283);
-            this.btnEliminarEvento.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnEliminarEvento.Location = new System.Drawing.Point(19, 367);
+            this.btnEliminarEvento.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnEliminarEvento.Name = "btnEliminarEvento";
-            this.btnEliminarEvento.Size = new System.Drawing.Size(215, 34);
+            this.btnEliminarEvento.Size = new System.Drawing.Size(242, 42);
             this.btnEliminarEvento.TabIndex = 45;
             this.btnEliminarEvento.Text = "Eliminar evento";
             this.btnEliminarEvento.UseVisualStyleBackColor = false;
@@ -62,34 +63,36 @@
             this.dgvEventos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEventos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvEventos.Location = new System.Drawing.Point(12, 92);
+            this.dgvEventos.Location = new System.Drawing.Point(28, 85);
             this.dgvEventos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEventos.Name = "dgvEventos";
             this.dgvEventos.RowHeadersWidth = 51;
-            this.dgvEventos.Size = new System.Drawing.Size(876, 186);
+            this.dgvEventos.Size = new System.Drawing.Size(986, 232);
             this.dgvEventos.TabIndex = 44;
+            this.dgvEventos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventos_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label2.Location = new System.Drawing.Point(32, 7);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(102, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 62);
+            this.label2.Size = new System.Drawing.Size(237, 74);
             this.label2.TabIndex = 43;
-            this.label2.Text = "EVENTOS";
+            this.label2.Text = "Eventos";
             // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.White;
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.btnVolver.Location = new System.Drawing.Point(394, 321);
+            this.btnVolver.Location = new System.Drawing.Point(11, 450);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(121, 26);
+            this.btnVolver.Size = new System.Drawing.Size(136, 33);
             this.btnVolver.TabIndex = 42;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -100,10 +103,10 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblNombre.Location = new System.Drawing.Point(294, 7);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombre.Location = new System.Drawing.Point(351, 0);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(358, 62);
+            this.lblNombre.Size = new System.Drawing.Size(427, 74);
             this.lblNombre.TabIndex = 46;
             this.lblNombre.Text = "(Nombre local)";
             // 
@@ -113,11 +116,12 @@
             this.btnModificarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificarEvento.FlatAppearance.BorderSize = 0;
             this.btnModificarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarEvento.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarEvento.ForeColor = System.Drawing.Color.White;
-            this.btnModificarEvento.Location = new System.Drawing.Point(348, 283);
-            this.btnModificarEvento.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnModificarEvento.Location = new System.Drawing.Point(348, 367);
+            this.btnModificarEvento.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnModificarEvento.Name = "btnModificarEvento";
-            this.btnModificarEvento.Size = new System.Drawing.Size(215, 34);
+            this.btnModificarEvento.Size = new System.Drawing.Size(242, 42);
             this.btnModificarEvento.TabIndex = 47;
             this.btnModificarEvento.Text = "Administrar Evento";
             this.btnModificarEvento.UseVisualStyleBackColor = false;
@@ -129,11 +133,12 @@
             this.btnAgregarEvento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarEvento.FlatAppearance.BorderSize = 0;
             this.btnAgregarEvento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEvento.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEvento.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEvento.Location = new System.Drawing.Point(622, 283);
-            this.btnAgregarEvento.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnAgregarEvento.Location = new System.Drawing.Point(663, 367);
+            this.btnAgregarEvento.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnAgregarEvento.Name = "btnAgregarEvento";
-            this.btnAgregarEvento.Size = new System.Drawing.Size(215, 34);
+            this.btnAgregarEvento.Size = new System.Drawing.Size(242, 42);
             this.btnAgregarEvento.TabIndex = 48;
             this.btnAgregarEvento.Text = "Agregar Evento";
             this.btnAgregarEvento.UseVisualStyleBackColor = false;
@@ -141,9 +146,10 @@
             // 
             // frmEventosLocal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 350);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(928, 494);
             this.Controls.Add(this.btnAgregarEvento);
             this.Controls.Add(this.btnModificarEvento);
             this.Controls.Add(this.lblNombre);

@@ -47,5 +47,10 @@ namespace Visual
             frm.IDUsuario = IDUsuario;
             frm.Show(); this.Hide();
         }
+
+        private void frmRegistrarLocal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

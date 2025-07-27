@@ -40,10 +40,10 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblNombre.Location = new System.Drawing.Point(255, 55);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombre.Location = new System.Drawing.Point(108, 145);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(214, 50);
+            this.lblNombre.Size = new System.Drawing.Size(252, 60);
             this.lblNombre.TabIndex = 38;
             this.lblNombre.Text = "[USUARIO]";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -52,13 +52,13 @@
             // 
             this.lblvolver.AutoSize = true;
             this.lblvolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblvolver.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvolver.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.lblvolver.Location = new System.Drawing.Point(171, 391);
+            this.lblvolver.Location = new System.Drawing.Point(156, 602);
             this.lblvolver.Name = "lblvolver";
-            this.lblvolver.Size = new System.Drawing.Size(189, 28);
+            this.lblvolver.Size = new System.Drawing.Size(153, 28);
             this.lblvolver.TabIndex = 37;
-            this.lblvolver.Text = "VOLVER AL INICIO ";
+            this.lblvolver.Text = "Volver al inicio";
             this.lblvolver.Click += new System.EventHandler(this.lblvolver_Click);
             // 
             // label1
@@ -66,10 +66,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(29, 55);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(108, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 50);
+            this.label1.Size = new System.Drawing.Size(271, 60);
             this.label1.TabIndex = 36;
             this.label1.Text = "Bienvenido ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,11 +78,12 @@
             // 
             this.btnRegistrarLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.btnRegistrarLocal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarLocal.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarLocal.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarLocal.Location = new System.Drawing.Point(110, 267);
+            this.btnRegistrarLocal.Location = new System.Drawing.Point(65, 447);
             this.btnRegistrarLocal.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarLocal.Name = "btnRegistrarLocal";
-            this.btnRegistrarLocal.Size = new System.Drawing.Size(309, 89);
+            this.btnRegistrarLocal.Size = new System.Drawing.Size(348, 84);
             this.btnRegistrarLocal.TabIndex = 35;
             this.btnRegistrarLocal.Text = "Registrar local";
             this.btnRegistrarLocal.UseVisualStyleBackColor = false;
@@ -92,11 +93,12 @@
             // 
             this.btnMisLocales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.btnMisLocales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMisLocales.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMisLocales.ForeColor = System.Drawing.Color.White;
-            this.btnMisLocales.Location = new System.Drawing.Point(110, 145);
+            this.btnMisLocales.Location = new System.Drawing.Point(65, 294);
             this.btnMisLocales.Margin = new System.Windows.Forms.Padding(2);
             this.btnMisLocales.Name = "btnMisLocales";
-            this.btnMisLocales.Size = new System.Drawing.Size(309, 90);
+            this.btnMisLocales.Size = new System.Drawing.Size(348, 85);
             this.btnMisLocales.TabIndex = 34;
             this.btnMisLocales.Text = "Mis locales";
             this.btnMisLocales.UseVisualStyleBackColor = false;
@@ -104,9 +106,10 @@
             // 
             // frmMenuVendedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 469);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(473, 714);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblvolver);
             this.Controls.Add(this.label1);

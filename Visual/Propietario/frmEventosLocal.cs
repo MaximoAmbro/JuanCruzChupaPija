@@ -79,5 +79,10 @@ namespace Visual.Vendedor
 
             }
         }
+
+        private void dgvEventos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
