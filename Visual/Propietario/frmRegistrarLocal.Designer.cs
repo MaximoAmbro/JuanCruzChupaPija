@@ -76,7 +76,7 @@
             this.btnregistrarse.Name = "btnregistrarse";
             this.btnregistrarse.Size = new System.Drawing.Size(224, 52);
             this.btnregistrarse.TabIndex = 47;
-            this.btnregistrarse.Text = "REGISTRARSE";
+            this.btnregistrarse.Text = "Registrarse";
             this.btnregistrarse.UseVisualStyleBackColor = false;
             this.btnregistrarse.Click += new System.EventHandler(this.btnregistrarse_Click);
             // 
@@ -122,7 +122,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label6.Location = new System.Drawing.Point(92, 205);
+            this.label6.Location = new System.Drawing.Point(92, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 25);
             this.label6.TabIndex = 43;
@@ -156,7 +156,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(97, 232);
+            this.txtNombre.Location = new System.Drawing.Point(97, 220);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(284, 32);
@@ -167,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(76, 96);
+            this.label1.Location = new System.Drawing.Point(76, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(305, 60);

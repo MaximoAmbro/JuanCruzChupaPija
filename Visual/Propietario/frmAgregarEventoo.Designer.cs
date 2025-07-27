@@ -42,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label1.Location = new System.Drawing.Point(85, 226);
+            this.label1.Location = new System.Drawing.Point(83, 243);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 21);
             this.label1.TabIndex = 1;
@@ -51,12 +51,13 @@
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(114, 483);
+            this.btnRegistrar.Location = new System.Drawing.Point(87, 495);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(207, 50);
+            this.btnRegistrar.Size = new System.Drawing.Size(261, 48);
             this.btnRegistrar.TabIndex = 2;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -67,7 +68,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label2.Location = new System.Drawing.Point(85, 319);
+            this.label2.Location = new System.Drawing.Point(83, 336);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 21);
             this.label2.TabIndex = 4;
@@ -76,18 +77,20 @@
             // lblVolver
             // 
             this.lblVolver.AutoSize = true;
-            this.lblVolver.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblVolver.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.lblVolver.Location = new System.Drawing.Point(183, 590);
+            this.lblVolver.Location = new System.Drawing.Point(177, 594);
             this.lblVolver.Name = "lblVolver";
-            this.lblVolver.Size = new System.Drawing.Size(66, 25);
+            this.lblVolver.Size = new System.Drawing.Size(72, 28);
             this.lblVolver.TabIndex = 5;
             this.lblVolver.Text = "Volver";
             this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
             // 
             // dtEvento
             // 
-            this.dtEvento.Location = new System.Drawing.Point(89, 344);
+            this.dtEvento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtEvento.Location = new System.Drawing.Point(87, 361);
             this.dtEvento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtEvento.Name = "dtEvento";
             this.dtEvento.Size = new System.Drawing.Size(272, 26);
@@ -109,7 +112,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(89, 249);
+            this.txtNombre.Location = new System.Drawing.Point(87, 266);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(272, 32);

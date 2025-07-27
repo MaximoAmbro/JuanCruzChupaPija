@@ -46,18 +46,18 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnVolver.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.btnVolver.Location = new System.Drawing.Point(15, 449);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(134, 34);
             this.btnVolver.TabIndex = 47;
-            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
             // 
@@ -66,9 +66,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(8, 126);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 20);
+            this.label6.Size = new System.Drawing.Size(82, 20);
             this.label6.TabIndex = 44;
-            this.label6.Text = "Nombre del evento";
+            this.label6.Text = "EN DUDA";
             // 
             // label3
             // 
@@ -76,9 +76,9 @@
             this.label3.Location = new System.Drawing.Point(8, 196);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 39;
-            this.label3.Text = "Fecha";
+            this.label3.Text = "EN DUDA";
             // 
             // txtNombre
             // 
@@ -140,7 +140,7 @@
             this.btnAgregarSector.Name = "btnAgregarSector";
             this.btnAgregarSector.Size = new System.Drawing.Size(194, 36);
             this.btnAgregarSector.TabIndex = 54;
-            this.btnAgregarSector.Text = "AGREGAR SECTOR";
+            this.btnAgregarSector.Text = "Agregar sector";
             this.btnAgregarSector.UseVisualStyleBackColor = false;
             this.btnAgregarSector.Click += new System.EventHandler(this.btnAgregarSector_Click);
             // 
@@ -157,7 +157,7 @@
             this.btnEliminarSector.Name = "btnEliminarSector";
             this.btnEliminarSector.Size = new System.Drawing.Size(194, 36);
             this.btnEliminarSector.TabIndex = 55;
-            this.btnEliminarSector.Text = "ELIMINAR SECTOR";
+            this.btnEliminarSector.Text = "Eliminar sector";
             this.btnEliminarSector.UseVisualStyleBackColor = false;
             this.btnEliminarSector.Click += new System.EventHandler(this.btnEliminarSector_Click);
             // 
@@ -173,7 +173,7 @@
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(125, 34);
             this.btnRegistrar.TabIndex = 57;
-            this.btnRegistrar.Text = "REGISTRAR";
+            this.btnRegistrar.Text = "EN DUDA ";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // dtpFechaHora
@@ -197,7 +197,7 @@
             this.btnModificarSector.Name = "btnModificarSector";
             this.btnModificarSector.Size = new System.Drawing.Size(194, 36);
             this.btnModificarSector.TabIndex = 59;
-            this.btnModificarSector.Text = "MODIFICAR SECTOR";
+            this.btnModificarSector.Text = "Modificar sector";
             this.btnModificarSector.UseVisualStyleBackColor = false;
             this.btnModificarSector.Click += new System.EventHandler(this.btnModificarSector_Click);
             // 

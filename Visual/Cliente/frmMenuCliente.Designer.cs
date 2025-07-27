@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(99, 83);
+            this.label1.Location = new System.Drawing.Point(99, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 60);
@@ -80,18 +80,18 @@
             this.lblvolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblvolver.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.lblvolver.Location = new System.Drawing.Point(137, 629);
+            this.lblvolver.Location = new System.Drawing.Point(152, 609);
             this.lblvolver.Name = "lblvolver";
-            this.lblvolver.Size = new System.Drawing.Size(189, 28);
+            this.lblvolver.Size = new System.Drawing.Size(153, 28);
             this.lblvolver.TabIndex = 32;
-            this.lblvolver.Text = "VOLVER AL INICIO ";
+            this.lblvolver.Text = "Volver al inicio";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblNombre.Location = new System.Drawing.Point(118, 157);
+            this.lblNombre.Location = new System.Drawing.Point(99, 144);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(252, 60);

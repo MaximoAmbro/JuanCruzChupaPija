@@ -44,7 +44,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label5.Location = new System.Drawing.Point(89, 315);
+            this.label5.Location = new System.Drawing.Point(85, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 21);
             this.label5.TabIndex = 50;
@@ -94,7 +94,7 @@
             this.lblmail.AutoSize = true;
             this.lblmail.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.lblmail.Location = new System.Drawing.Point(89, 400);
+            this.lblmail.Location = new System.Drawing.Point(85, 400);
             this.lblmail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblmail.Name = "lblmail";
             this.lblmail.Size = new System.Drawing.Size(90, 21);
@@ -106,7 +106,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label6.Location = new System.Drawing.Point(89, 227);
+            this.label6.Location = new System.Drawing.Point(85, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 21);
             this.label6.TabIndex = 44;
@@ -141,7 +141,7 @@
             this.lblyatengocuen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblyatengocuen.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblyatengocuen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.lblyatengocuen.Location = new System.Drawing.Point(191, 634);
+            this.lblyatengocuen.Location = new System.Drawing.Point(198, 633);
             this.lblyatengocuen.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblyatengocuen.Name = "lblyatengocuen";
             this.lblyatengocuen.Size = new System.Drawing.Size(72, 28);

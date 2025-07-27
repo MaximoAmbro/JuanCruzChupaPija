@@ -40,7 +40,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblNombre.Location = new System.Drawing.Point(127, 141);
+            this.lblNombre.Location = new System.Drawing.Point(108, 145);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(252, 60);
@@ -54,11 +54,11 @@
             this.lblvolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblvolver.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.lblvolver.Location = new System.Drawing.Point(151, 616);
+            this.lblvolver.Location = new System.Drawing.Point(156, 602);
             this.lblvolver.Name = "lblvolver";
-            this.lblvolver.Size = new System.Drawing.Size(189, 28);
+            this.lblvolver.Size = new System.Drawing.Size(153, 28);
             this.lblvolver.TabIndex = 37;
-            this.lblvolver.Text = "VOLVER AL INICIO ";
+            this.lblvolver.Text = "Volver al inicio";
             this.lblvolver.Click += new System.EventHandler(this.lblvolver_Click);
             // 
             // label1
@@ -78,8 +78,9 @@
             // 
             this.btnRegistrarLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.btnRegistrarLocal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarLocal.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarLocal.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarLocal.Location = new System.Drawing.Point(72, 437);
+            this.btnRegistrarLocal.Location = new System.Drawing.Point(65, 447);
             this.btnRegistrarLocal.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarLocal.Name = "btnRegistrarLocal";
             this.btnRegistrarLocal.Size = new System.Drawing.Size(348, 84);
@@ -92,8 +93,9 @@
             // 
             this.btnMisLocales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.btnMisLocales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMisLocales.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMisLocales.ForeColor = System.Drawing.Color.White;
-            this.btnMisLocales.Location = new System.Drawing.Point(72, 284);
+            this.btnMisLocales.Location = new System.Drawing.Point(65, 294);
             this.btnMisLocales.Margin = new System.Windows.Forms.Padding(2);
             this.btnMisLocales.Name = "btnMisLocales";
             this.btnMisLocales.Size = new System.Drawing.Size(348, 85);

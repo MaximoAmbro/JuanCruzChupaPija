@@ -159,7 +159,7 @@
             this.lblyatengocuen.AutoSize = true;
             this.lblyatengocuen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblyatengocuen.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblyatengocuen.Location = new System.Drawing.Point(153, 655);
+            this.lblyatengocuen.Location = new System.Drawing.Point(159, 655);
             this.lblyatengocuen.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblyatengocuen.Name = "lblyatengocuen";
             this.lblyatengocuen.Size = new System.Drawing.Size(149, 25);
@@ -205,6 +205,7 @@
             // 
             // cbTipoUsuario
             // 
+            this.cbTipoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbTipoUsuario.FormattingEnabled = true;
             this.cbTipoUsuario.Items.AddRange(new object[] {
             "Cliente",
