@@ -1,38 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Net.Http.Headers;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Repositorio; 
+using System;
+using System.Configuration;  
+using Microsoft.Data.SqlClient;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Visual
 {
     public partial class frmInicio : Form
     {
-
         public SqlConnection ConexionSql;
+        private Repositorio.GestorUsuarios gestorUsuarios;
         public frmInicio()
         {
-            InitializeComponent();
             string miConexion =
             ConfigurationManager.ConnectionStrings["Visual.Properties.Settings.BddEventAura"].ConnectionString;
             ConexionSql = new SqlConnection(miConexion);
+            gestorUsuarios = new GestorUsuarios(ConexionSql);
+
+            InitializeComponent();
         }
+        
         private void frmInicio_Load(object sender, EventArgs e)
         {
+            
             txtMailLogin.Text = "";
             txtContraseñaLogin.Text = "";
             txtContraseñaLogin.PasswordChar = '*';
         }
+
         private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if (checkbxShowPass.Checked == true)
@@ -47,14 +42,16 @@ namespace Visual
         private void lblolividarcontra_Click(object sender, EventArgs e)
         {
             frmCambiarContraseña frm = new frmCambiarContraseña();
+            frm.gestorusuarios = gestorUsuarios;
             frm.ConexionSql = ConexionSql;
             frm.Show();
             this.Hide();
         } // Llama frmCambiarContraseña
         private void lblcrearcuenta_Click(object sender, EventArgs e)
         {
-            frmCrearUsuario frm = new frmCrearUsuario();
+            frmAgregarEvento frm = new frmAgregarEvento();  // este es agregar usuario pero se cambio el nombre y no le encuentro la vuelta
             frm.ConexionSql = ConexionSql;
+            frm.gestorusuarios = gestorUsuarios;
             frm.Show();
             this.Hide();
         } // Llama a frmCrearCuenta
@@ -83,74 +80,35 @@ namespace Visual
         } // Llamado a los menues
         public void ValidarLista(string mail, string contraseña)
         {
-            string consulta = "SELECT TipoUsuario FROM Usuario WHERE Mail = @Mail AND Contraseña = @Contraseña";
-            string consulta2 = "SELECT Nombre FROM Usuario WHERE Mail = @Mail AND Contraseña = @Contraseña";
-            string consulta3 = "SELECT ID FROM Usuario WHERE Mail = @Mail AND Contraseña = @Contraseña";
-            string NombreUsuario = string.Empty;
-            int ID = 0;
-            using (SqlCommand sqlcomando3 = new SqlCommand(consulta3, ConexionSql))
+          if( gestorUsuarios.ValidarCredenciales(mail, contraseña) == true)
             {
-                sqlcomando3.Parameters.AddWithValue("@Mail", txtMailLogin.Text);
-                sqlcomando3.Parameters.AddWithValue("@Contraseña", txtContraseñaLogin.Text);
-                ConexionSql.Open();
-                object IDUsuario = sqlcomando3.ExecuteScalar();
-                ConexionSql.Close();
-                if (IDUsuario != null)
+                gestorUsuarios.ObtenerIDUsuario(mail, contraseña, out int IdUsuario);
+                gestorUsuarios.ObtenerNombreUsuario(mail, contraseña, out string nombreUsuario);
+                gestorUsuarios.ObtenerTipoUsuario(mail, contraseña, out string tipoUsuario);
+                if (tipoUsuario == "Cliente")
                 {
-                    ID = Convert.ToInt32(IDUsuario);
+                    frmMenuCliente frm = new frmMenuCliente();
+                    frm.IDUsuario = IdUsuario;
+                    frm.NombreUsuario = nombreUsuario;
+                    frm.ConexionSql = ConexionSql;
+                    frm.Show();
+                    this.Hide();
                 }
-            } // busca y devuelve el ID del usuario
-            using (SqlCommand sqlcomando2 = new SqlCommand(consulta2, ConexionSql)) 
-            {
-                sqlcomando2.Parameters.AddWithValue("@Mail", txtMailLogin.Text);
-                sqlcomando2.Parameters.AddWithValue("@Contraseña", txtContraseñaLogin.Text);
-                ConexionSql.Open();
-                object Nombre = sqlcomando2.ExecuteScalar();
-                ConexionSql.Close();
-                if (Nombre != null)
+                if (tipoUsuario == "Propietario")
                 {
-                    NombreUsuario = Nombre.ToString();
-                }
-            } // busca y devuelve el nombre de usuario
-            using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
-            {
-                sqlcomando.Parameters.AddWithValue("@Mail", txtMailLogin.Text);
-                sqlcomando.Parameters.AddWithValue("@Contraseña", txtContraseñaLogin.Text);
-
-                ConexionSql.Open();
-                object resultado = sqlcomando.ExecuteScalar(); 
-                
-                ConexionSql.Close();
-
-                if (resultado != null)
-                {
-                    string tipoUsuario = resultado.ToString();
-                    if (tipoUsuario == "Cliente")
-                    {
-                        frmMenuCliente frm = new frmMenuCliente();
-                        frm.NombreUsuario = NombreUsuario;
-                        frm.IDUsuario = ID;
-                        frm.ConexionSql = ConexionSql;
-                        frm.Show();
-                        this.Hide();
-                    }
-                    else if (tipoUsuario == "Propietario")
-                    {
-                        frmMenuVendedor frm = new frmMenuVendedor();
-                        frm.IDUsuario = ID;
-
-                        frm.NombreUsuario = NombreUsuario;
-                        frm.ConexionSql = ConexionSql;
-                        frm.Show();
-                        this.Hide();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Correo o contraseña incorrectos.");
+                    frmMenuVendedor frm = new frmMenuVendedor();
+                    frm.IDUsuario= IdUsuario;
+                    frm.NombreUsuario = nombreUsuario;
+                    frm.ConexionSql = ConexionSql;
+                    frm.Show();
+                    this.Hide();
                 }
             }
-        } // Valida la lista de usuarios
+            else
+            {
+                MessageBox.Show ("Mail o contraseña incorrecta");
+            }
+        }
+    } // Valida la lista de usuarios
 
-    }
 }

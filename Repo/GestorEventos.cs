@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Entidades;
+using Microsoft.Data.SqlClient;
+using QRCoder;
+using System;
 using System.Collections.Generic;
-
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Entidades;
-using QRCoder;
 using static Entidades.Evento;
+using static QRCoder.PayloadGenerator;
 namespace Negocio
 {
     public partial class GestorEventos //Lista
@@ -25,35 +26,21 @@ namespace Negocio
     }
     public partial class GestorEventos //Metodos
     {
-        public bool BuscarLista(string NombreEvento)
+        public void EliminarEvento(int idEvento, SqlConnection _conexion)
         {
-            Evento evento1 = null;
-            foreach (var c in eventos)
+            string consulta = "DELETE FROM Eventos WHERE ID = @ID";
+            using (SqlCommand comando = new SqlCommand(consulta, _conexion)) 
             {
-                if (c.Nombre == NombreEvento)
+                comando.Parameters.AddWithValue("@ID", idEvento);
+                _conexion.Open();
+                int filasAfectadas = comando.ExecuteNonQuery();
+                _conexion.Close();
+                if (filasAfectadas == 0)
                 {
-                    evento1 = c;
-                    break;
+                    throw new Exception("No se encontró ningún evento con ese ID.");
                 }
             }
-            if (evento1 == null)
-            {
-
-                return false;
-                throw new Exception("Evento no encontrado");
-            }
-            else
-            {
-                SectorA = evento1.Sectores[0].Nombre;
-                SectorB = evento1.Sectores[1].Nombre;
-                SectorC = evento1.Sectores[2].Nombre;
-                PrecioA = evento1.Sectores[0].Precio.ToString();
-                PrecioB = evento1.Sectores[1].Precio.ToString();
-                PrecioC = evento1.Sectores[2].Precio.ToString();
-                return true;
-            }
         }
-
         public void GenerarTicket(string NombreEvento, string NombreSector, string PrecioSector, string FechaEvento)
         {
             MensajeTicket = null;
@@ -80,22 +67,54 @@ namespace Negocio
                         }
                     }
 
-        } 
-        public List<Evento> ObtenerListaEventos()
-        {
-            return eventos;
         }
-        public void DevolverEntrada(string NombreEvento)
+        public void AgregarEvento(string nombre, DateTime fecha, int IDLocal, SqlConnection _conexion)
         {
-            foreach (var c in eventos)
+            string consulta = "INSERT INTO Eventos (Nombre, Fecha, LocalID) VALUES (@Nombre, @Fecha, @LocalID)";
+            using (SqlCommand comando = new SqlCommand(consulta, _conexion))
             {
-                if (c.Nombre == NombreEvento)
+                comando.Parameters.AddWithValue("@Nombre", nombre);
+                comando.Parameters.AddWithValue("@Fecha", fecha);
+                comando.Parameters.AddWithValue("@LocalID", IDLocal);
+                _conexion.Open();
+                comando.ExecuteNonQuery();
+                _conexion.Close();
+            }
+        }
+        public void EliminarSector(string Nombre, int idEvento, SqlConnection _conexion)
+        {
+            string consulta = "DELETE FROM Sectores WHERE Nombre = @Nombre AND EventoID = @EventoID";
+            using (SqlCommand comando = new SqlCommand(consulta, _conexion))
+            {
+                comando.Parameters.AddWithValue("@EventoID", idEvento);
+                comando.Parameters.AddWithValue("@Nombre", Nombre);
+                _conexion.Open();
+                int filasAfectadas = comando.ExecuteNonQuery();
+                _conexion.Close();
+                if (filasAfectadas == 0)
                 {
-                    break;
+                    throw new Exception("No se encontró ningún evento con ese ID.");
                 }
             }
         }
+
+        public void AgregarSector(string nombre, int capacidad, int precio, int idEvento, SqlConnection _conexion)
+        {
+            string consulta = "INSERT INTO Sectores (Nombre, Capacidad, Precio, EventoID) VALUES (@Nombre, @Capacidad, @Precio, @EventoID)";
+            using (SqlCommand comando = new SqlCommand(consulta, _conexion))
+            {
+                comando.Parameters.AddWithValue("@Nombre", nombre);
+                comando.Parameters.AddWithValue("@Capacidad", capacidad);
+                comando.Parameters.AddWithValue("@Precio", precio);
+                comando.Parameters.AddWithValue("@EventoID", idEvento);
+                _conexion.Open();
+                comando.ExecuteNonQuery();
+                _conexion.Close();
+            }
+        }
+
+
     }
-    
+
 }
     

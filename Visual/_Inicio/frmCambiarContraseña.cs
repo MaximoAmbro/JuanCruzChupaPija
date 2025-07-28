@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Repositorio;
 
 namespace Visual
 {
     public partial class frmCambiarContraseña : Form
     {
         public SqlConnection ConexionSql;
+        public GestorUsuarios gestorusuarios;
         public frmCambiarContraseña()
         {
             InitializeComponent();
@@ -49,7 +51,7 @@ namespace Visual
         {
             if (ControlarTxt() == true)
             {
-                CambiarContraseña();
+                gestorusuarios.CambiarContraseña(txtMail.Text, TxtPassword.Text);
                 MessageBox.Show("Contraseña cambiada");
             } // se carga a la bdd
             else
@@ -93,26 +95,10 @@ namespace Visual
                 return true;
             }
         } // Controla que se llenen todos los campos
-        private void CambiarContraseña()
-        {
-            string consulta = "UPDATE Usuario SET Contraseña = @Contraseña WHERE Mail = @Mail";
-            using (SqlCommand sqlcomando = new SqlCommand(consulta, ConexionSql))
-            {
-                sqlcomando.Parameters.AddWithValue("@Mail", txtMail.Text);
-                sqlcomando.Parameters.AddWithValue("@Contraseña", TxtPassword.Text); 
 
-                ConexionSql.Open();
-                int filasAfectadas = sqlcomando.ExecuteNonQuery();
-                ConexionSql.Close();
-                if (filasAfectadas > 0)
-                {
-                    MessageBox.Show("Contraseña actualizada correctamente.");
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró un usuario con ese correo.");
-                }
-            }
-        } // Cambia la contraseña para la bdd
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

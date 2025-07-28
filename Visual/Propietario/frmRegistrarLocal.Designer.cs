@@ -44,9 +44,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(107, 123);
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.label5.Location = new System.Drawing.Point(92, 273);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 16);
+            this.label5.Size = new System.Drawing.Size(92, 25);
             this.label5.TabIndex = 49;
             this.label5.Text = "Direccion";
             // 
@@ -55,10 +57,10 @@
             this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccion.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(107, 152);
+            this.txtDireccion.Location = new System.Drawing.Point(97, 300);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(252, 27);
+            this.txtDireccion.Size = new System.Drawing.Size(284, 32);
             this.txtDireccion.TabIndex = 50;
             // 
             // btnregistrarse
@@ -67,13 +69,14 @@
             this.btnregistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnregistrarse.FlatAppearance.BorderSize = 0;
             this.btnregistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregistrarse.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrarse.ForeColor = System.Drawing.Color.White;
-            this.btnregistrarse.Location = new System.Drawing.Point(107, 304);
-            this.btnregistrarse.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnregistrarse.Location = new System.Drawing.Point(115, 552);
+            this.btnregistrarse.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnregistrarse.Name = "btnregistrarse";
-            this.btnregistrarse.Size = new System.Drawing.Size(252, 42);
+            this.btnregistrarse.Size = new System.Drawing.Size(224, 52);
             this.btnregistrarse.TabIndex = 47;
-            this.btnregistrarse.Text = "REGISTRARSE";
+            this.btnregistrarse.Text = "Registrarse";
             this.btnregistrarse.UseVisualStyleBackColor = false;
             this.btnregistrarse.Click += new System.EventHandler(this.btnregistrarse_Click);
             // 
@@ -81,41 +84,47 @@
             // 
             this.lblyatengocuen.AutoSize = true;
             this.lblyatengocuen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblyatengocuen.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblyatengocuen.Location = new System.Drawing.Point(207, 371);
-            this.lblyatengocuen.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblyatengocuen.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblyatengocuen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.lblyatengocuen.Location = new System.Drawing.Point(186, 635);
+            this.lblyatengocuen.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblyatengocuen.Name = "lblyatengocuen";
-            this.lblyatengocuen.Size = new System.Drawing.Size(53, 20);
+            this.lblyatengocuen.Size = new System.Drawing.Size(72, 28);
             this.lblyatengocuen.TabIndex = 46;
             this.lblyatengocuen.Text = "Volver";
+            this.lblyatengocuen.Click += new System.EventHandler(this.lblyatengocuen_Click);
             // 
             // txtAltura
             // 
             this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtAltura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltura.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAltura.Location = new System.Drawing.Point(107, 216);
-            this.txtAltura.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.txtAltura.Location = new System.Drawing.Point(97, 380);
+            this.txtAltura.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(252, 27);
+            this.txtAltura.Size = new System.Drawing.Size(284, 32);
             this.txtAltura.TabIndex = 45;
             // 
             // lblmail
             // 
             this.lblmail.AutoSize = true;
-            this.lblmail.Location = new System.Drawing.Point(107, 187);
-            this.lblmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblmail.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.lblmail.Location = new System.Drawing.Point(92, 353);
+            this.lblmail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblmail.Name = "lblmail";
-            this.lblmail.Size = new System.Drawing.Size(41, 16);
+            this.lblmail.Size = new System.Drawing.Size(65, 25);
             this.lblmail.TabIndex = 44;
             this.lblmail.Text = "Altura";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(107, 70);
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.label6.Location = new System.Drawing.Point(92, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(81, 25);
             this.label6.TabIndex = 43;
             this.label6.Text = "Nombre";
             // 
@@ -124,19 +133,21 @@
             this.txtCapacidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtCapacidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCapacidad.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCapacidad.Location = new System.Drawing.Point(107, 278);
-            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.txtCapacidad.Location = new System.Drawing.Point(97, 458);
+            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.txtCapacidad.Name = "txtCapacidad";
-            this.txtCapacidad.Size = new System.Drawing.Size(252, 27);
+            this.txtCapacidad.Size = new System.Drawing.Size(284, 32);
             this.txtCapacidad.TabIndex = 39;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(107, 250);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.label3.Location = new System.Drawing.Point(92, 431);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.Size = new System.Drawing.Size(100, 25);
             this.label3.TabIndex = 38;
             this.label3.Text = "Capacidad";
             // 
@@ -145,10 +156,10 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("MS Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(107, 98);
+            this.txtNombre.Location = new System.Drawing.Point(97, 220);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(252, 27);
+            this.txtNombre.Size = new System.Drawing.Size(284, 32);
             this.txtNombre.TabIndex = 48;
             // 
             // label1
@@ -156,18 +167,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(65, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(76, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 50);
+            this.label1.Size = new System.Drawing.Size(305, 60);
             this.label1.TabIndex = 37;
-            this.label1.Text = "REGISTRAR LOCAL";
+            this.label1.Text = "Registar local";
             // 
             // frmRegistrarLocal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 423);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(473, 714);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.btnregistrarse);
@@ -183,6 +195,7 @@
             this.Name = "frmRegistrarLocal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarLocal";
+            this.Load += new System.EventHandler(this.frmRegistrarLocal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -45,9 +45,9 @@
             this.txtMailLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtMailLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMailLogin.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMailLogin.Location = new System.Drawing.Point(97, 259);
+            this.txtMailLogin.Location = new System.Drawing.Point(108, 249);
             this.txtMailLogin.Name = "txtMailLogin";
-            this.txtMailLogin.Size = new System.Drawing.Size(227, 27);
+            this.txtMailLogin.Size = new System.Drawing.Size(250, 32);
             this.txtMailLogin.TabIndex = 5;
             this.txtMailLogin.TabStop = false;
             // 
@@ -56,17 +56,17 @@
             this.txtContraseñaLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtContraseñaLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseñaLogin.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaLogin.Location = new System.Drawing.Point(97, 367);
+            this.txtContraseñaLogin.Location = new System.Drawing.Point(108, 336);
             this.txtContraseñaLogin.Name = "txtContraseñaLogin";
-            this.txtContraseñaLogin.Size = new System.Drawing.Size(227, 27);
+            this.txtContraseñaLogin.Size = new System.Drawing.Size(250, 32);
             this.txtContraseñaLogin.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 326);
+            this.label3.Location = new System.Drawing.Point(103, 305);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 23);
+            this.label3.Size = new System.Drawing.Size(118, 28);
             this.label3.TabIndex = 6;
             this.label3.Text = "Contraseña";
             // 
@@ -75,9 +75,9 @@
             this.checkbxShowPass.AutoSize = true;
             this.checkbxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkbxShowPass.Location = new System.Drawing.Point(248, 405);
+            this.checkbxShowPass.Location = new System.Drawing.Point(228, 407);
             this.checkbxShowPass.Name = "checkbxShowPass";
-            this.checkbxShowPass.Size = new System.Drawing.Size(151, 27);
+            this.checkbxShowPass.Size = new System.Drawing.Size(178, 32);
             this.checkbxShowPass.TabIndex = 10;
             this.checkbxShowPass.Text = "Show Password";
             this.checkbxShowPass.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@
             // 
             this.lblolividarcontra.AutoSize = true;
             this.lblolividarcontra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblolividarcontra.Location = new System.Drawing.Point(112, 627);
+            this.lblolividarcontra.Location = new System.Drawing.Point(103, 602);
             this.lblolividarcontra.Name = "lblolividarcontra";
-            this.lblolividarcontra.Size = new System.Drawing.Size(212, 23);
+            this.lblolividarcontra.Size = new System.Drawing.Size(255, 28);
             this.lblolividarcontra.TabIndex = 18;
             this.lblolividarcontra.Text = "¿Olvidaste tu contraseña?";
             this.lblolividarcontra.Click += new System.EventHandler(this.lblolividarcontra_Click);
@@ -99,9 +99,9 @@
             this.lblcrearcuenta.AutoSize = true;
             this.lblcrearcuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblcrearcuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.lblcrearcuenta.Location = new System.Drawing.Point(155, 664);
+            this.lblcrearcuenta.Location = new System.Drawing.Point(157, 656);
             this.lblcrearcuenta.Name = "lblcrearcuenta";
-            this.lblcrearcuenta.Size = new System.Drawing.Size(114, 23);
+            this.lblcrearcuenta.Size = new System.Drawing.Size(134, 28);
             this.lblcrearcuenta.TabIndex = 19;
             this.lblcrearcuenta.Text = "Crear Cuenta";
             this.lblcrearcuenta.Click += new System.EventHandler(this.lblcrearcuenta_Click);
@@ -113,20 +113,20 @@
             this.btninicio.FlatAppearance.BorderSize = 0;
             this.btninicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btninicio.ForeColor = System.Drawing.Color.White;
-            this.btninicio.Location = new System.Drawing.Point(97, 516);
+            this.btninicio.Location = new System.Drawing.Point(108, 508);
             this.btninicio.Name = "btninicio";
-            this.btninicio.Size = new System.Drawing.Size(227, 49);
+            this.btninicio.Size = new System.Drawing.Size(240, 49);
             this.btninicio.TabIndex = 20;
-            this.btninicio.Text = "INICIAR SESION ";
+            this.btninicio.Text = "Iniciar sesión";
             this.btninicio.UseVisualStyleBackColor = false;
             this.btninicio.Click += new System.EventHandler(this.btninicio_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(97, 216);
+            this.label5.Location = new System.Drawing.Point(103, 218);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 23);
+            this.label5.Size = new System.Drawing.Size(54, 28);
             this.label5.TabIndex = 21;
             this.label5.Text = "Mail";
             // 
@@ -135,12 +135,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label2.Location = new System.Drawing.Point(32, 79);
+            this.label2.Location = new System.Drawing.Point(108, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 50);
+            this.label2.Size = new System.Drawing.Size(240, 60);
             this.label2.TabIndex = 22;
-            this.label2.Text = "LOGIN";
+            this.label2.Text = "EventAura";
             // 
             // btnModificar
             // 
@@ -153,10 +153,10 @@
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(405, 734);
+            this.ClientSize = new System.Drawing.Size(473, 714);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
