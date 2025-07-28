@@ -13,7 +13,6 @@ namespace Negocio
 {
     public partial class GestorEventos //Lista
     {
-        List<Evento> eventos = new List<Evento>();
         public string SectorA { get; set; }
         public string SectorB { get; set; }
         public string SectorC { get; set; }
@@ -111,8 +110,54 @@ namespace Negocio
                 comando.ExecuteNonQuery();
                 _conexion.Close();
             }
+            ReasignarPrecio(idEvento, _conexion);
         }
 
+        public void ReasignarPrecio(int idEvento, SqlConnection conexion)
+        {
+            List<(int SectorID, decimal Precio)> sectores = new List<(int SectorID, decimal Precio)>();
+            string select = "SELECT ID, Precio FROM Sectores WHERE EventoID = @ID_Evento";
+            using (SqlCommand comando = new SqlCommand(select, conexion))
+            {
+                comando.Parameters.AddWithValue("@ID_Evento", idEvento);
+                conexion.Open();
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int sectorID = reader.GetInt32(0);
+                        decimal precio = reader.GetDecimal(1);
+                        sectores.Add((sectorID, precio));
+                    }
+                }
+                conexion.Close();
+                var sectoresOrdenados = sectores.OrderByDescending(s => s.Precio).ToList();
+                string update = "UPDATE Sectores SET PrecioID = @PrecioID WHERE ID = @SectorID";
+                conexion.Open();
+                for (int i = 0; i < sectoresOrdenados.Count; i++)
+                {
+                    using (SqlCommand cmd = new SqlCommand(update, conexion))
+                    {
+                        int? precioID;
+
+                        if (i < 3)
+                        {
+                            precioID = i + 1;
+                        }
+                        else
+                        {
+                            precioID = null;
+                        }
+                        cmd.Parameters.AddWithValue("@SectorID", sectoresOrdenados[i].SectorID);
+                        cmd.Parameters.AddWithValue("@PrecioID", (object)precioID ?? DBNull.Value);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                conexion.Close();
+            }
+        }
+       
 
     }
 

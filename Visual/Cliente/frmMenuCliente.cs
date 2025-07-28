@@ -21,10 +21,6 @@ namespace Visual
         {
             InitializeComponent();
         }
-        private void frmMenuUsuario_Load(object sender, EventArgs e)
-        {
-            lblNombre.Text = NombreUsuario;
-        }
         private void btnEventos_Click(object sender, EventArgs e)
         {
             frmEventosCliente frm = new frmEventosCliente();
@@ -48,6 +44,12 @@ namespace Visual
             frmInicio frm = new frmInicio();
             frm.Show();
             this.Hide();
+        }
+
+        private void frmMenuCliente_Load(object sender, EventArgs e)
+        {
+            lblNombre.Text = NombreUsuario;
+
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Visual.Propietario
 
         private void lblVolver_Click(object sender, EventArgs e)
         {
-            frmModificarSectoresEventos frm = new frmModificarSectoresEventos();
+            frmEventosLocal frm = new frmEventosLocal();
             frm.ConexionSql = ConexionSql;
             frm.IDlocal = IDlocal;
             frm.IDUsuario = IDUsuario;

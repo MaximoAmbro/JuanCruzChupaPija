@@ -31,25 +31,25 @@ namespace Visual
             dgvHistorial.ClearSelection();
             this.Hide();
         }
-        private void frmHistorial_Load(object sender, EventArgs e)
+        private void frmHistorialCliente_Load(object sender, EventArgs e)
         {
             string consulta = "SELECT E.Nombre AS NombreEvento, L.Direccion AS Ubicacion, E.Fecha " +
-                              "FROM Entradas EN " +
-                              "JOIN Eventos E ON EN.ID_Evento = E.ID " +
-                              "JOIN Locales L ON E.LocalID = L.ID " +
-                              "WHERE EN.ID_Usuario = @IDUsuario";
+                  "FROM Entradas EN " +
+                  "JOIN Eventos E ON EN.ID_Evento = E.ID " +
+                  "JOIN Locales L ON E.LocalID = L.ID " +
+                  "WHERE EN.ID_Usuario = @IDUsuario";
 
             using (SqlCommand cmd = new SqlCommand(consulta, ConexionSql))
             {
-                cmd.Parameters.AddWithValue("@IDUsuario", IDUsuario); 
+                cmd.Parameters.AddWithValue("@IDUsuario", IDUsuario);
 
                 SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
-                dgvHistorial.DataSource = tabla; 
+                dgvHistorial.DataSource = tabla;
             }
-
         }
+
     }
 }

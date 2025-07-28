@@ -46,10 +46,6 @@ namespace Visual
 
             InitializeComponent();
         }
-        private void FrmCompra_Load(object sender, EventArgs e)
-        {
-            CargarSectores();
-        } // Una vez iniciado se cargan los sectores en CargarSectores
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmEventosCliente frm = new frmEventosCliente();
@@ -234,6 +230,11 @@ namespace Visual
 
             ConexionSql.Close();
         } // Aca se llaman a los sectores de la base de datos y se cargan en los labels correspondientes
+
+        private void FrmCompraCliente_Load(object sender, EventArgs e)
+        {
+            CargarSectores();
+        }
     }
 }
 

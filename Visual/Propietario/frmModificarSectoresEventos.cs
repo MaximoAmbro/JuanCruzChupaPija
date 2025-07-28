@@ -34,16 +34,6 @@ namespace Visual.Vendedor
         }
         private void frmAgregarEventoLocal_Load(object sender, EventArgs e)
         {
-            // falta logica bdd
-            CargarDGV();
-        }
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            // falta logica bdd
-            DateTime fechaHora = dtpFechaHora.Value;
-            DateTime fecha = fechaHora.Date;
-            TimeSpan hora = fechaHora.TimeOfDay;
-            NombreEvento = txtNombre.Text;
             CargarDGV();
         }
         public void CargarDGV()
@@ -88,8 +78,8 @@ namespace Visual.Vendedor
                     string nombreSector = dgvSectores.SelectedCells[0].Value.ToString();
                 
                     gestorEventos.EliminarSector(nombreSector, IDEvento, ConexionSql);
+                    gestorEventos.ReasignarPrecio(IDEvento, ConexionSql);
                     CargarDGV();
-                
             }
             else
             {
